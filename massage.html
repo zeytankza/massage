@@ -2129,7 +2129,7 @@
 
           <!-- Строка 3 (Ссылки на документы капсом с подчеркиванием при наведении) -->
           <div class="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-1.5 text-[11px] sm:text-xs tracking-wider uppercase font-semibold text-[#D1D5DB]">
-            <a href="#" onclick="showToast('Политика конфиденциальности (152-ФЗ)'); return false;" class="hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-all py-1">
+            <a href="#" onclick="openLegalModal('privacy'); return false;" class="hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-all py-1">
               ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ (152-ФЗ)
             </a>
             <span class="hidden md:inline text-sage-600">•</span>
@@ -2296,18 +2296,82 @@
           </div>
         </div>
 
-        <button type="submit" class="min-h-[48px] w-full bg-[#1F332A] hover:bg-[#16251F] text-white font-semibold text-sm py-3.5 rounded-xl shadow-md transition-all mt-2 cursor-pointer">
+        <!-- Чекбокс согласия 152-ФЗ (по умолчанию выключен) -->
+        <div id="consent-wrapper" class="p-3 rounded-xl border border-[#E5E0D8] bg-[#FAF7F2]/80 transition-all duration-200 mt-2">
+          <label class="flex items-start gap-3 cursor-pointer select-none">
+            <input 
+              type="checkbox" 
+              id="modal-consent" 
+              onchange="toggleSubmitButtonState()"
+              class="w-5 h-5 min-w-[20px] rounded-md text-[#1F332A] focus:ring-[#1F332A] border-[#D9C4AC] mt-0.5 cursor-pointer accent-[#1F332A]"
+            />
+            <span class="text-xs text-[#374151] leading-relaxed">
+              Даю согласие на <button type="button" onclick="openLegalModal('privacy')" class="text-[#7A5229] underline hover:text-[#1F332A] font-bold">обработку персональных данных</button> в соответствии с требованиями 152-ФЗ РФ.
+            </span>
+          </label>
+        </div>
+
+        <div id="consent-error-msg" class="hidden text-xs text-red-600 font-bold px-1">
+          * Пожалуйста, подтвердите согласие на обработку персональных данных
+        </div>
+
+        <!-- Кнопка отправки (заблокирована по умолчанию) -->
+        <button 
+          type="submit" 
+          id="modal-submit-btn" 
+          disabled 
+          class="min-h-[48px] w-full bg-[#1F332A] text-white font-semibold text-sm py-3.5 rounded-xl shadow-md transition-all mt-2 opacity-40 cursor-not-allowed pointer-events-none"
+        >
           Отправить заявку Виктории
         </button>
-
-        <p class="text-[11px] text-center text-[#4B5563] font-medium">
-          Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
-        </p>
 
       </form>
     </div>
   </dialog>
 
+
+  <!-- =========================================================================
+       LEGAL MODAL (152-ФЗ Политика конфиденциальности)
+       ========================================================================= -->
+  <dialog id="legal-modal" class="p-0 bg-transparent backdrop:bg-sage-950/70 backdrop:backdrop-blur-sm z-50 max-w-2xl w-full mx-auto" aria-labelledby="legal-modal-title">
+    <div class="bg-white rounded-3xl p-5 sm:p-8 shadow-2xl border border-[#E5E0D8] relative m-3 sm:m-4 max-h-[85vh] flex flex-col">
+      
+      <!-- Close button -->
+      <button onclick="closeLegalModal()" class="min-w-[44px] min-h-[44px] absolute top-3 right-3 p-2 rounded-xl text-[#4B5563] hover:text-[#1F2421] hover:bg-cream-200 transition-colors flex items-center justify-center cursor-pointer" aria-label="Закрыть">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="border-b border-[#E5E0D8] pb-3 mb-4 pr-10">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-2.5 py-0.5 rounded-full border border-[#D9C4AC]">
+          152-ФЗ РФ
+        </span>
+        <h3 id="legal-modal-title" class="font-serif text-lg sm:text-xl font-bold text-[#1F2421] mt-1">
+          Политика конфиденциальности и обработки персональных данных
+        </h3>
+      </div>
+
+      <div class="overflow-y-auto space-y-4 text-xs sm:text-sm text-[#374151] leading-relaxed pr-2">
+        <p><strong>1. Общие положения</strong><br>
+        Настоящая Политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению их безопасности Индивидуальным предпринимателем Агаджановой Ануш Сергеевной (ИНН 263212876540, г. Пятигорск).</p>
+        
+        <p><strong>2. Цели сбора и обработки данных</strong><br>
+        Сбор персональных данных (имя, номер телефона, удобное время сеанса) осуществляется исключительно в целях бронирования сеансов массажа и SPA-процедур, обратной связи с клиентом, подтверждения визита в мессенджерах (WhatsApp, Telegram) и предоставления консультаций по услугам салона.</p>
+
+        <p><strong>3. Принципы обработки данных</strong><br>
+        Оператор не передаёт персональные данные третьим лицам без согласия субъекта данных, за исключением случаев, предусмотренных законодательством РФ. Базы данных и серверы сайта размещены исключительно на территории Российской Федерации в соответствии с ч. 5 ст. 18 152-ФЗ.</p>
+
+        <p><strong>4. Отзыв согласия</strong><br>
+        Субъект персональных данных имеет право в любой момент отозвать своё согласие, направив письменное заявление по электронной почте <a href="mailto:info@victoria-spa.ru" class="text-[#7A5229] font-bold underline">info@victoria-spa.ru</a> или обратившись по адресу: г. Пятигорск, просп. Калинина, 19.</p>
+      </div>
+
+      <div class="pt-4 border-t border-[#E5E0D8] mt-4 flex justify-end">
+        <button onclick="closeLegalModal()" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl transition-all cursor-pointer">
+          Понятно, закрыть
+        </button>
+      </div>
+
+    </div>
+  </dialog>
 
   <!-- Toast notification banner -->
   <div id="toast" class="fixed top-5 right-5 z-50 hidden bg-[#13201A] text-cream-100 px-5 py-3 rounded-2xl shadow-2xl border border-[#8A633A]/60 text-xs sm:text-sm font-semibold items-center gap-2 transition-all">
@@ -2351,6 +2415,23 @@
         }, { passive: true });
       }
     });
+
+
+    // Legal Modal (152-FZ)
+    function openLegalModal(type = 'privacy') {
+      const modal = document.getElementById('legal-modal');
+      if (modal) {
+        modal.showModal();
+        lucide.createIcons();
+      }
+    }
+
+    function closeLegalModal() {
+      const modal = document.getElementById('legal-modal');
+      if (modal) {
+        modal.close();
+      }
+    }
 
     // Mobile Menu Toggle
     function toggleMobileMenu() {
@@ -2624,6 +2705,7 @@
     function openBookingModal(defaultService = '') {
       const modal = document.getElementById('booking-modal');
       const serviceSelect = document.getElementById('modal-service');
+      const consent = document.getElementById('modal-consent');
       
       if (serviceSelect && defaultService) {
         for (let i = 0; i < serviceSelect.options.length; i++) {
@@ -2634,8 +2716,39 @@
         }
       }
 
+      // Сброс чекбокса согласия и блокировка кнопки (по закону галочка не должна стоять заранее)
+      if (consent) {
+        consent.checked = false;
+        toggleSubmitButtonState();
+      }
+
       if (modal) {
         modal.showModal();
+      }
+    }
+
+    // Toggle Consent & Submit Button State
+    function toggleSubmitButtonState() {
+      const consent = document.getElementById('modal-consent');
+      const submitBtn = document.getElementById('modal-submit-btn');
+      const wrapper = document.getElementById('consent-wrapper');
+      const errorMsg = document.getElementById('consent-error-msg');
+
+      if (!consent || !submitBtn) return;
+
+      if (consent.checked) {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-40', 'cursor-not-allowed', 'pointer-events-none');
+        submitBtn.classList.add('opacity-100', 'cursor-pointer', 'hover:bg-[#16251F]');
+        if (wrapper) {
+          wrapper.classList.remove('border-red-500', 'bg-red-50/50');
+          wrapper.classList.add('border-[#E5E0D8]', 'bg-[#FAF7F2]/80');
+        }
+        if (errorMsg) errorMsg.classList.add('hidden');
+      } else {
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-40', 'cursor-not-allowed', 'pointer-events-none');
+        submitBtn.classList.remove('opacity-100', 'cursor-pointer', 'hover:bg-[#16251F]');
       }
     }
 
@@ -2649,6 +2762,21 @@
     // Booking Submit -> WhatsApp or Telegram
     function handleBookingSubmit(event) {
       event.preventDefault();
+
+      const consent = document.getElementById('modal-consent');
+      const wrapper = document.getElementById('consent-wrapper');
+      const errorMsg = document.getElementById('consent-error-msg');
+
+      // Строгая проверка согласия 152-ФЗ
+      if (!consent || !consent.checked) {
+        if (wrapper) {
+          wrapper.classList.remove('border-[#E5E0D8]', 'bg-[#FAF7F2]/80');
+          wrapper.classList.add('border-red-500', 'bg-red-50/50');
+        }
+        if (errorMsg) errorMsg.classList.remove('hidden');
+        showToast('Пожалуйста, подтвердите согласие на обработку данных');
+        return false;
+      }
       
       const service = document.getElementById('modal-service').value;
       const name = document.getElementById('modal-name').value;

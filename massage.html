@@ -1,0 +1,2649 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Студия массажа и SPA Виктории в Пятигорске | Рейтинг 5.0 | Запись ежедневно 08:00–23:00</title>
+  <meta name="description" content="Премиальный массаж и SPA в центре Пятигорска от топ-мастера Виктории. Снятие болей в спине, кедровая бочка, спортивный массаж после гор, коррекция фигуры, буккальный массаж. Проспект Калинина, 19. Рейтинг 5.0 на Яндекс Картах." />
+  <meta name="keywords" content="массаж Пятигорск, спа Пятигорск, массаж Виктория Пятигорск, кедровая бочка Пятигорск, спортивный массаж Машук Бештау, массаж спины Пятигорск, буккальный массаж Пятигорск, Starvac Пятигорск, СПА для двоих Пятигорск" />
+  <meta name="author" content="Студия массажа и SPA Виктории" />
+  <meta name="theme-color" content="#1F332A" />
+
+  <!-- Open Graph / VK / Telegram -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="Студия массажа & SPA Виктории | Пятигорск" />
+  <meta property="og:title" content="Студия массажа и SPA Виктории в Пятигорске | Глубокая перезагрузка тела" />
+  <meta property="og:description" content="Премиальный массаж, кедровая бочка и аппаратная коррекция в Пятигорске. Снятие зажимов и болей за 1 сеанс. Работаем с 8:00 до 23:00. Просп. Калинина, 19." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%231F332A'/%3E%3Cpath d='M50 20 C35 38 25 52 25 65 C25 78 36 85 50 85 C64 85 75 78 75 65 C75 52 65 38 50 20 Z' fill='%238A633A' opacity='0.9'/%3E%3Cpath d='M50 35 C42 48 37 58 37 68 C37 76 43 80 50 80 C57 80 63 76 63 68 C63 58 58 48 50 35 Z' fill='%23FAF7F2'/%3E%3Ccircle cx='50' cy='62' r='4' fill='%231F332A'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Cormorant Garamond (Serif) + Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            pine: {
+              DEFAULT: '#1F332A',
+              dark: '#16251F',
+              deep: '#0F1A15',
+              hover: '#284438',
+            },
+            sage: {
+              50: '#F2F6F4',
+              100: '#E1EAE5',
+              200: '#C3D5CC',
+              300: '#9DBAA9',
+              400: '#6F9781',
+              500: '#43735D',
+              600: '#2D4A3E',
+              700: '#243C32',
+              800: '#1F332A',
+              900: '#13201A',
+            },
+            bronze: {
+              DEFAULT: '#8A633A',
+              dark: '#7A5229',
+              light: '#A87E4E',
+              soft: '#F7EFE6',
+              border: '#D9C4AC',
+            },
+            cream: {
+              50: '#FFFFFF',
+              100: '#FCFAF6',
+              200: '#FAF7F2',
+              300: '#F5F0E8',
+              400: '#E5E0D8',
+              500: '#D5CDC0',
+            },
+            graphite: {
+              DEFAULT: '#1F2421',
+              dark: '#111827',
+              body: '#2D3748',
+              muted: '#374151',
+              subtle: '#4B5563',
+              border: '#E5E0D8',
+            }
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -10px rgba(31, 51, 42, 0.08)',
+            'card': '0 10px 28px -6px rgba(31, 51, 42, 0.06), 0 2px 6px -1px rgba(31, 51, 42, 0.03)',
+            'elevated': '0 20px 45px -12px rgba(31, 51, 42, 0.18)',
+            'pine-glow': '0 10px 25px -5px rgba(31, 51, 42, 0.35)',
+            'bronze-glow': '0 10px 25px -5px rgba(138, 99, 58, 0.30)',
+          },
+          animation: {
+            'float': 'float 4s ease-in-out infinite',
+            'pulse-subtle': 'pulseSubtle 2.5s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' },
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+              '50%': { opacity: '0.9', transform: 'scale(1.02)' },
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS tweaks & smooth mobile styling -->
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C3D5CC;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9DBAA9;
+    }
+
+    /* Hide scrollbars for carousels */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* iOS smooth momentum scrolling */
+    html, body {
+      touch-action: pan-y;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Prevent iOS auto-zoom on input focus */
+    @media (max-width: 640px) {
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    /* Safe bottom padding for iPhone dock */
+    .pb-safe {
+      padding-bottom: max(14px, env(safe-area-inset-bottom, 14px));
+    }
+
+    /* Glassmorphism utility */
+    .glass-nav {
+      background: rgba(250, 247, 242, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .glass-dark {
+      background: rgba(19, 32, 26, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Subtle background grain & patterns */
+    .bg-pattern-linen {
+      background-color: #FAF7F2;
+      background-image: radial-gradient(rgba(31, 51, 42, 0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* Active Tab indicator */
+    .tab-btn.active {
+      background-color: #1F332A;
+      color: #FFFFFF;
+      box-shadow: 0 8px 20px -4px rgba(31, 51, 42, 0.28);
+    }
+    .tab-btn:not(.active) {
+      background-color: #FFFFFF;
+      color: #2D3748;
+    }
+    .tab-btn:not(.active):hover {
+      background-color: #F5F0E8;
+      color: #1F332A;
+    }
+
+    /* Accordion transitions */
+    .faq-answer {
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+    }
+
+    /* Shimmer effect */
+    .badge-shimmer {
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+  </style>
+
+  <!-- Schema.org Microdata (JSON-LD) for Local SEO & Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DaySpa",
+    "@id": "https://massage-pyatigorsk.ru/#spa",
+    "name": "Студия массажа и SPA Виктории",
+    "alternateName": "Victoria Massage & SPA Studio Pyatigorsk",
+    "description": "Премиальная студия массажа, кедровой бочки и SPA-программ в центре Пятигорска. Авторские техники массажа, снятие болей, восстановление после восхождений на Машук и Бештау, коррекция фигуры.",
+    "url": "https://massage-pyatigorsk.ru/",
+    "telephone": "+79620230888",
+    "priceRange": "₽₽",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "проспект Калинина, 19",
+      "addressLocality": "Пятигорск",
+      "addressRegion": "Ставропольский край",
+      "postalCode": "357500",
+      "addressCountry": "RU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.0487,
+      "longitude": 43.0594
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "23:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5.0",
+      "worstRating": "1.0",
+      "ratingCount": "42",
+      "reviewCount": "42"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Своя удобная парковка у входа",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Индивидуальная душевая комната",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Кедровая бочка и ИК-кабина",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Отдельный вход с улицы",
+        "value": true
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-pattern-linen text-graphite-body font-sans antialiased overflow-x-hidden pb-20 sm:pb-0 selection:bg-[#EEDDC6] selection:text-[#1F332A]">
+
+  <!-- =========================================================================
+       1. TOP INFO BAR & HEADER
+       ========================================================================= -->
+  <aside aria-label="Верхняя информационная строка" class="bg-[#13201A] text-cream-100 text-xs py-2 px-4 border-b border-[#1F332A]">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-3 text-xs md:text-sm">
+        <span class="inline-flex items-center gap-1.5 text-white">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span class="font-medium text-white">г. Пятигорск, просп. Калинина, 19</span>
+        </span>
+        <span class="hidden md:inline text-sage-500">•</span>
+        <span class="hidden md:inline-flex items-center gap-1.5 text-[#E5E7EB]">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span>Ежедневно 08:00–23:00 (ранний и поздний приём)</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <div class="flex items-center gap-1.5 font-semibold">
+          <span class="flex text-amber-400 text-xs">★★★★★</span>
+          <span class="text-white font-bold ml-0.5">5.0</span>
+          <span class="text-[#D1D5DB] hidden sm:inline">(Яндекс Карты • 100% рекомендаций)</span>
+        </div>
+        <span class="hidden sm:inline text-sage-600">|</span>
+        <button onclick="copyToClipboard('проспект Калинина, 19', 'Адрес студии скопирован!')" class="hidden sm:inline-flex items-center gap-1.5 text-[#E5E7EB] hover:text-white transition-colors cursor-pointer min-h-[32px]" title="Скопировать адрес">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span>Скопировать адрес</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation Header with Reading Progress Bar -->
+  <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E5E0D8]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      
+      <!-- ЛОГОТИП (Не сжимается) -->
+      <a href="#" class="flex items-center gap-3 flex-shrink-0 focus:outline-none">
+        <div class="w-11 h-11 rounded-xl bg-[#1F332A] text-[#D9C4AC] flex items-center justify-center font-serif text-xl font-bold shadow-sm border border-[#8A633A]/30 flex-shrink-0">
+          В
+        </div>
+        <div class="whitespace-nowrap flex-shrink-0">
+          <div class="font-serif text-2xl font-bold text-[#1F332A] leading-tight tracking-wide">ВИКТОРИЯ</div>
+          <div class="text-[10px] uppercase tracking-widest text-[#7A5229] font-bold">Студия массажа & SPA • Пятигорск</div>
+        </div>
+      </a>
+
+      <!-- КОМПАКТНОЕ МЕНЮ (Только 4 пункта, без переносов, на экранах от 1280px) -->
+      <nav class="hidden xl:flex items-center gap-8 text-[15px] font-semibold text-[#2D3748]">
+        <a href="#services" class="hover:text-[#1F332A] transition-colors whitespace-nowrap">Услуги и цены</a>
+        <a href="#about" class="hover:text-[#1F332A] transition-colors whitespace-nowrap">О мастере</a>
+        <a href="#reviews" class="hover:text-[#1F332A] transition-colors whitespace-nowrap">Отзывы 5.0</a>
+        <a href="#contacts" class="hover:text-[#1F332A] transition-colors whitespace-nowrap">Контакты</a>
+      </nav>
+
+      <!-- ПРАВАЯ ЧАСТЬ: Телефон (в 1 строчку) + 1 Главная кнопка -->
+      <div class="hidden md:flex items-center gap-6 flex-shrink-0">
+        
+        <!-- Телефон без переноса строк -->
+        <a href="tel:+79620230888" class="flex flex-col text-right group whitespace-nowrap flex-shrink-0">
+          <span class="text-[11px] text-[#4B5563] font-medium leading-none mb-1 whitespace-nowrap">08:00 – 23:00 без выходных</span>
+          <span class="text-base font-bold text-[#111827] group-hover:text-[#1F332A] transition-colors whitespace-nowrap">+7 (962) 023-08-88</span>
+        </a>
+
+        <!-- Единственная кнопка записи -->
+        <button onclick="openBookingModal('Запись из шапки')" class="whitespace-nowrap inline-flex items-center gap-2 bg-[#1F332A] hover:bg-[#16251F] text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-md transition-all hover:scale-[1.02] active:scale-[0.98] flex-shrink-0">
+          <i data-lucide="calendar" class="w-4 h-4 text-[#D9C4AC]"></i>
+          <span>Записаться на сеанс</span>
+        </button>
+      </div>
+
+      <!-- Кнопка бургер-меню (для экранов меньше 1280px) -->
+      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="xl:hidden p-2.5 rounded-xl text-[#1F332A] hover:bg-[#E5E0D8]/50 focus:outline-none flex-shrink-0" aria-label="Открыть меню">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Reading Progress Bar (Terracotta/Bronze 2.5px) -->
+  <div class="w-full h-[2.5px] bg-[#E5E0D8]/60 overflow-hidden">
+    <div id="reading-progress-bar" class="h-full bg-gradient-to-r from-[#C29968] to-[#8A633A] w-0 transition-all duration-150"></div>
+  </div>
+
+  <!-- Mobile Drawer Navigation -->
+  <div id="mobile-menu" class="hidden xl:hidden bg-[#FAF7F2] border-b border-[#E5E0D8] px-4 pt-3 pb-6 transition-all duration-300 shadow-xl">
+    <nav class="flex flex-col space-y-2 font-semibold text-base text-[#2D3748]">
+      <a href="#services" onclick="toggleMobileMenu()" class="min-h-[44px] py-2.5 px-3 rounded-xl hover:bg-cream-300 text-[#1F332A] flex items-center justify-between">
+        <span>Услуги и цены</span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-[#7A5229]"></i>
+      </a>
+      <a href="#about" onclick="toggleMobileMenu()" class="min-h-[44px] py-2.5 px-3 rounded-xl hover:bg-cream-300 text-[#1F332A] flex items-center justify-between">
+        <span>О мастере Виктории</span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-[#7A5229]"></i>
+      </a>
+      <a href="#quiz" onclick="toggleMobileMenu()" class="min-h-[44px] py-2.5 px-3 rounded-xl hover:bg-cream-300 text-[#1F332A] flex items-center justify-between">
+        <span>Квиз: быстрый подбор</span>
+        <span class="text-xs bg-[#F7EFE6] text-[#7A5229] px-2.5 py-1 rounded-full font-bold border border-[#D9C4AC]">Бонус</span>
+      </a>
+      <a href="#mountains" onclick="toggleMobileMenu()" class="min-h-[44px] py-2.5 px-3 rounded-xl hover:bg-cream-300 text-[#1F332A] flex items-center justify-between">
+        <span>Восстановление после гор (Бештау / Машук)</span>
+        <i data-lucide="mountain" class="w-4 h-4 text-[#1F332A]"></i>
+      </a>
+      <a href="#certificates" onclick="toggleMobileMenu()" class="min-h-[44px] py-2.5 px-3 rounded-xl hover:bg-cream-300 text-[#1F332A] flex items-center justify-between">
+        <span>Подарочные сертификаты</span>
+        <i data-lucide="gift" class="w-4 h-4 text-[#7A5229]"></i>
+      </a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="min-h-[44px] py-2.5 px-3 rounded-xl hover:bg-cream-300 text-[#1F332A] flex items-center justify-between">
+        <span>Отзывы клиентов (★ 5.0)</span>
+        <span class="text-xs text-amber-700 font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-200">40+ отзывов</span>
+      </a>
+      <a href="#contacts" onclick="toggleMobileMenu()" class="min-h-[44px] py-2.5 px-3 rounded-xl hover:bg-cream-300 text-[#1F332A] flex items-center justify-between">
+        <span>Контакты и карта</span>
+        <i data-lucide="map-pin" class="w-4 h-4 text-[#1F332A]"></i>
+      </a>
+    </nav>
+
+    <div class="mt-5 pt-4 border-t border-[#E5E0D8] flex flex-col gap-3">
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-[#374151]">Ежедневно с 8:00 до 23:00:</span>
+        <a href="tel:+79620230888" class="font-bold text-[#111827] text-base hover:text-[#1F332A] whitespace-nowrap">+7 (962) 023-08-88</a>
+      </div>
+      
+      <div class="grid grid-cols-2 gap-2 mt-2">
+        <a href="https://wa.me/79620230888?text=Здравствуйте!%20Хочу%20записаться%20на%20массаж%20в%20студию%20Виктории" target="_blank" rel="noopener noreferrer" class="min-h-[44px] flex items-center justify-center gap-2 bg-emerald-600 text-white py-2.5 rounded-xl text-sm font-semibold shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.541 1.849.82 2.796.82 3.183 0 5.769-2.587 5.769-5.767 0-3.181-2.586-5.766-5.769-5.766zm3.374 8.163c-.144.405-.837.774-1.17.823-.313.046-.704.072-2.072-.493-1.636-.677-2.67-2.339-2.752-2.449-.082-.109-.661-.881-.661-1.68 0-.798.421-1.192.571-1.353.15-.16.329-.2.439-.2.11 0 .22.001.315.006.102.004.237-.039.37.28.14.336.478 1.164.52 1.25.042.086.07.187.014.3-.056.113-.084.184-.167.282-.084.099-.176.221-.252.298-.084.084-.172.176-.074.344.098.168.437.721.938 1.167.644.574 1.187.752 1.355.836.168.084.267.07.366-.042.099-.113.421-.49.533-.659.112-.168.225-.141.378-.084.153.056.97.457 1.137.541.168.084.28.127.322.197.042.07.042.408-.102.813zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.436 5.176L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/+79620230888" target="_blank" rel="noopener noreferrer" class="min-h-[44px] flex items-center justify-center gap-2 bg-sky-600 text-white py-2.5 rounded-xl text-sm font-semibold shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.15 3.35-1.35 3.73-1.35.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          <span>Telegram</span>
+        </a>
+      </div>
+
+      <button onclick="toggleMobileMenu(); openBookingModal('Мобильная запись')" class="min-h-[48px] w-full bg-[#1F332A] text-white py-3 rounded-xl font-semibold text-sm mt-1 shadow-md">
+        Записаться онлайн
+      </button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- =========================================================================
+       2. HERO SECTION (COMPACT & ABOVE-THE-FOLD ON MOBILE)
+       ========================================================================= -->
+  <section class="relative overflow-hidden pt-4 pb-8 sm:pt-8 sm:pb-16 lg:pt-14 lg:pb-24">
+    <!-- Ambient glow decorative circles -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-[#EEDDC6]/40 via-sage-100/30 to-cream-300/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute -top-24 right-0 w-96 h-96 bg-sage-200/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+        
+        <!-- Left Content Column -->
+        <div class="lg:col-span-7 flex flex-col items-start text-left">
+          
+          <!-- Key Trust Trigger with Avatar immediately visible above the fold -->
+          <div class="inline-flex items-center gap-2 bg-white border border-[#D9C4AC] rounded-full p-1 pr-3 shadow-sm mb-3 sm:mb-4">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Виктория" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-[#8A633A]/40 flex-shrink-0" />
+            <div class="text-[11px] sm:text-xs text-[#1F2421] font-semibold leading-tight">
+              <span class="font-bold text-[#1F332A]">Виктория</span> • 8+ лет практики • <span class="text-amber-600 font-bold">★ 5.0</span> на Яндекс Картах
+            </div>
+          </div>
+
+          <!-- Main Headline with Serif Typography -->
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#1F2421] leading-[1.14] sm:leading-[1.12] tracking-tight mb-3 sm:mb-5 font-bold">
+            Снятие боли и зажимов за 1 сеанс <span class="block sm:inline font-normal text-2xl sm:text-5xl lg:text-6xl italic text-[#7A5229] underline decoration-[#8A633A]/30 underline-offset-4 sm:underline-offset-8">в центре Пятигорска</span>
+          </h1>
+
+          <!-- Subtitle / Value Proposition -->
+          <p class="text-[#2D3748] text-sm sm:text-lg lg:text-xl font-normal leading-relaxed mb-5 sm:mb-8 max-w-2xl">
+            Авторские техники массажа, кедровая бочка и аппаратная коррекция от топ-мастера <strong class="text-[#1F332A] font-bold">Виктории</strong>. Работаем ежедневно с 08:00 до 23:00 — снимем усталость и вернём телу лёгкость.
+          </p>
+
+          <!-- Primary CTA Action Buttons: Compact on mobile, 100% Above the Fold -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 w-full sm:w-auto mb-6 sm:mb-10">
+            <a href="https://wa.me/79620230888?text=Здравствуйте!%20Хочу%20записаться%20на%20первый%20сеанс%20со%20скидкой" target="_blank" rel="noopener noreferrer" class="min-h-[48px] relative group inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#1F332A] via-[#243C32] to-[#1F332A] hover:from-[#16251F] hover:to-[#16251F] text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl shadow-elevated transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 overflow-hidden text-center">
+              <span class="absolute inset-0 badge-shimmer pointer-events-none"></span>
+              <svg class="w-5 h-5 fill-emerald-400 group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.541 1.849.82 2.796.82 3.183 0 5.769-2.587 5.769-5.767 0-3.181-2.586-5.766-5.769-5.766zm3.374 8.163c-.144.405-.837.774-1.17.823-.313.046-.704.072-2.072-.493-1.636-.677-2.67-2.339-2.752-2.449-.082-.109-.661-.881-.661-1.68 0-.798.421-1.192.571-1.353.15-.16.329-.2.439-.2.11 0 .22.001.315.006.102.004.237-.039.37.28.14.336.478 1.164.52 1.25.042.086.07.187.014.3-.056.113-.084.184-.167.282-.084.099-.176.221-.252.298-.084.084-.172.176-.074.344.098.168.437.721.938 1.167.644.574 1.187.752 1.355.836.168.084.267.07.366-.042.099-.113.421-.49.533-.659.112-.168.225-.141.378-.084.153.056.97.457 1.137.541.168.084.28.127.322.197.042.07.042.408-.102.813zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.436 5.176L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.642 0-3.167-.488-4.444-1.326l-.319-.209-2.957.828.84-2.883-.23-.338C4.015 14.808 3.5 13.46 3.5 12c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5-3.813 8.5-8.5 8.5z"/></svg>
+              <span>Записаться в WhatsApp</span>
+              <span class="ml-1 text-xs bg-[#8A633A] text-white font-bold px-2 py-0.5 rounded-md">-10%</span>
+            </a>
+
+            <a href="#services" class="min-h-[48px] inline-flex items-center justify-center gap-2 bg-white hover:bg-cream-300 text-[#1F332A] border border-[#E5E0D8] font-semibold text-sm sm:text-base px-5 sm:px-6 py-3.5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 text-center">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#8A633A]"></i>
+              <span>Смотреть услуги и цены</span>
+            </a>
+          </div>
+
+          <!-- Micro Quick Benefits Pills -->
+          <div class="flex flex-wrap items-center gap-2 text-xs text-[#374151] font-medium">
+            <span class="inline-flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-[#E5E0D8] shadow-sm">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+              <span>Одноразовое бельё и душ</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-[#E5E0D8] shadow-sm">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+              <span>Парковка у самого входа</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-[#E5E0D8] shadow-sm">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+              <span>Чай со сборами Кавказа</span>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Right Visual Composition Column (Hidden on tiny mobile to save scroll, shown from sm up) -->
+        <div class="lg:col-span-5 relative hidden sm:block">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-cream-300">
+              <img 
+                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80" 
+                alt="Премиальная атмосфера студии массажа и спа Виктории в Пятигорске" 
+                class="w-full h-[400px] lg:h-[480px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0F1A15]/85 via-transparent to-black/10"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4 text-white p-4 rounded-2xl glass-dark border border-white/20">
+                <div class="flex items-center gap-2 mb-1">
+                  <div class="w-2 h-2 rounded-full bg-[#D9C4AC]"></div>
+                  <span class="text-xs uppercase tracking-wider text-[#EEDDC6] font-bold">Атмосфера гармонии</span>
+                </div>
+                <p class="font-serif text-sm text-cream-100 font-medium">
+                  «Чистый уютный кабинет, мягкий свет, натуральные масла и забота о вашем теле с первых секунд».
+                </p>
+              </div>
+            </div>
+
+            <!-- Floating Trust Badge 1: Rating 5.0 -->
+            <div class="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-elevated border border-[#D9C4AC] flex items-center gap-3 animate-float">
+              <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-300 flex items-center justify-center text-amber-600 font-bold text-sm">
+                ★ 5.0
+              </div>
+              <div class="pr-2">
+                <div class="text-xs font-bold text-[#1F2421] leading-tight">Яндекс Карты</div>
+                <div class="text-[11px] text-[#4B5563] font-medium">40+ честных отзывов</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Triggers Cards Grid (Compact 2 cols on mobile, 4 on desktop) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 mt-8 sm:mt-14 lg:mt-20">
+        
+        <!-- Card 1 -->
+        <div class="bg-white border border-[#E5E0D8] p-3.5 sm:p-5 rounded-2xl shadow-card hover:shadow-elevated transition-all flex flex-col sm:flex-row items-start gap-2.5 sm:gap-4">
+          <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="star" class="w-5 h-5 sm:w-6 sm:h-6 fill-amber-500 text-amber-500"></i>
+          </div>
+          <div>
+            <div class="font-bold text-[#1F2421] text-xs sm:text-base leading-snug">Рейтинг 5.0 из 5.0</div>
+            <div class="text-[11px] sm:text-[13px] text-[#374151] mt-0.5 sm:mt-1 leading-snug">
+              Более 40 отзывов на Яндекс Картах. 100% довольных гостей.
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white border border-[#E5E0D8] p-3.5 sm:p-5 rounded-2xl shadow-card hover:shadow-elevated transition-all flex flex-col sm:flex-row items-start gap-2.5 sm:gap-4">
+          <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-sage-50 text-sage-800 border border-sage-200 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="shield-check" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-[#1F2421] text-xs sm:text-base leading-snug">Своя парковка и душ</div>
+            <div class="text-[11px] sm:text-[13px] text-[#374151] mt-0.5 sm:mt-1 leading-snug">
+              Отдельный вход с улицы, персональный душ и бесплатная парковка.
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white border border-[#E5E0D8] p-3.5 sm:p-5 rounded-2xl shadow-card hover:shadow-elevated transition-all flex flex-col sm:flex-row items-start gap-2.5 sm:gap-4">
+          <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-[#F7EFE6] text-[#7A5229] border border-[#D9C4AC] flex items-center justify-center flex-shrink-0">
+            <i data-lucide="flame" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-[#1F2421] text-xs sm:text-base leading-snug">Кедровая бочка и ИК</div>
+            <div class="text-[11px] sm:text-[13px] text-[#374151] mt-0.5 sm:mt-1 leading-snug">
+              Сибирский кедр, аромат целебных алтайских трав, глубокий прогрев.
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white border border-[#E5E0D8] p-3.5 sm:p-5 rounded-2xl shadow-card hover:shadow-elevated transition-all flex flex-col sm:flex-row items-start gap-2.5 sm:gap-4">
+          <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="clock" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-[#1F2421] text-xs sm:text-base leading-snug">График 08:00 – 23:00</div>
+            <div class="text-[11px] sm:text-[13px] text-[#374151] mt-0.5 sm:mt-1 leading-snug">
+              Приём ежедневно без выходных. Утренние и поздние вечерние сеансы.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       3. TARGET AUDIENCE BLOCK (MOBILE HORIZONTAL SWIPE CAROUSEL)
+       ========================================================================= -->
+  <section class="py-12 sm:py-16 bg-[#F5F0E8] border-y border-[#E5E0D8]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3.5 py-1 rounded-full border border-[#D9C4AC]">
+          Индивидуальный подход
+        </span>
+        <h2 class="font-serif text-2xl sm:text-4xl text-[#1F2421] mt-3 font-bold">
+          Кому мы помогаем восстановить силы и здоровье
+        </h2>
+        <p class="text-[#374151] text-xs sm:text-base mt-2">
+          Листайте вбок, чтобы найти подходящую программу под вашу задачу:
+        </p>
+      </div>
+
+      <!-- Mobile: Horizontal Swipe Carousel with snap; Desktop: 5-column grid -->
+      <div id="audience-carousel" class="flex sm:grid sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory pb-3 sm:pb-0 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
+        
+        <!-- Audience 1: Residents -->
+        <div class="snap-center min-w-[82vw] sm:min-w-0 max-w-[82vw] sm:max-w-none flex-shrink-0 sm:flex-shrink bg-white p-5 rounded-2xl border border-[#E5E0D8] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center mb-3">
+              <i data-lucide="briefcase" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-[#1F2421] text-base mb-1.5">Жители Пятигорска и КМВ</h3>
+            <p class="text-[13px] text-[#374151] leading-relaxed">
+              Офисные сотрудники, водители, мамы. Снимаем боли в шее, пояснице, зажимы между лопаток и хронический стресс.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-[#7A5229] mt-4 block">Оздоровительный массаж →</span>
+        </div>
+
+        <!-- Audience 2: Tourists -->
+        <div class="snap-center min-w-[82vw] sm:min-w-0 max-w-[82vw] sm:max-w-none flex-shrink-0 sm:flex-shrink bg-white p-5 rounded-2xl border border-[#E5E0D8] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#F7EFE6] text-[#7A5229] flex items-center justify-center mb-3">
+              <i data-lucide="palmtree" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-[#1F2421] text-base mb-1.5">Гости и туристы курорта</h3>
+            <p class="text-[13px] text-[#374151] leading-relaxed">
+              Отдыхающие в санаториях и отелях. Премиальный индивидуальный массаж без очередей, суеты и казенной атмосферы.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-[#7A5229] mt-4 block">SPA-релакс и бочка →</span>
+        </div>
+
+        <!-- Audience 3: Athletes & Hikers -->
+        <div class="snap-center min-w-[82vw] sm:min-w-0 max-w-[82vw] sm:max-w-none flex-shrink-0 sm:flex-shrink bg-white p-5 rounded-2xl border-2 border-[#8A633A]/80 shadow-card hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-2 right-2 bg-[#8A633A] text-white text-[10px] font-bold px-2 py-0.5 rounded">Хит</div>
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-3">
+              <i data-lucide="mountain-snow" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-[#1F2421] text-base mb-1.5">Спортсмены и хайкеры</h3>
+            <p class="text-[13px] text-[#374151] leading-relaxed">
+              После восхождений на Машук и Бештау. Глубокая проработка забитых икр, квадрицепсов и связок, снятие крепатуры.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-emerald-800 mt-4 block">Спортивный массаж →</span>
+        </div>
+
+        <!-- Audience 4: Women & Body Sculpting -->
+        <div class="snap-center min-w-[82vw] sm:min-w-0 max-w-[82vw] sm:max-w-none flex-shrink-0 sm:flex-shrink bg-white p-5 rounded-2xl border border-[#E5E0D8] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center mb-3">
+              <i data-lucide="heart" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-[#1F2421] text-base mb-1.5">Коррекция фигуры и лицо</h3>
+            <p class="text-[13px] text-[#374151] leading-relaxed">
+              Женщины, желающие подтянутый силуэт и сияющую кожу: антицеллюлитный массаж, Starvac, буккальный лифтинг, кавитация.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-rose-800 mt-4 block">Моделирование & Лицо →</span>
+        </div>
+
+        <!-- Audience 5: Couples -->
+        <div class="snap-center min-w-[82vw] sm:min-w-0 max-w-[82vw] sm:max-w-none flex-shrink-0 sm:flex-shrink bg-white p-5 rounded-2xl border border-[#E5E0D8] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center mb-3">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-[#1F2421] text-base mb-1.5">Романтические пары</h3>
+            <p class="text-[13px] text-[#374151] leading-relaxed">
+              Программы «СПА для двоих»: кедровая бочка, ароматерапия, массаж при свечах и расслабляющий фиточай в уединении.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-purple-800 mt-4 block">СПА для двоих →</span>
+        </div>
+
+      </div>
+
+      <!-- Mobile Carousel Pagination Dots -->
+      <div class="flex sm:hidden items-center justify-center gap-1.5 mt-3" id="audience-dots">
+        <span class="dot w-6 h-1.5 rounded-full bg-[#1F332A] transition-all"></span>
+        <span class="dot w-1.5 h-1.5 rounded-full bg-[#D5CDC0] transition-all"></span>
+        <span class="dot w-1.5 h-1.5 rounded-full bg-[#D5CDC0] transition-all"></span>
+        <span class="dot w-1.5 h-1.5 rounded-full bg-[#D5CDC0] transition-all"></span>
+        <span class="dot w-1.5 h-1.5 rounded-full bg-[#D5CDC0] transition-all"></span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       4. INTERACTIVE QUIZ (Быстрый подбор массажа)
+       ========================================================================= -->
+  <section id="quiz" class="py-14 lg:py-20 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="bg-white rounded-3xl border border-[#E5E0D8] p-5 sm:p-10 shadow-elevated relative overflow-hidden">
+        
+        <!-- Header of Quiz -->
+        <div class="text-center max-w-xl mx-auto mb-6 sm:mb-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3.5 py-1 rounded-full border border-[#D9C4AC] inline-block mb-2 sm:mb-3">
+            Интерактивный тест за 1 минуту
+          </span>
+          <h2 class="font-serif text-2xl sm:text-4xl text-[#1F2421] font-bold">
+            Не знаете, какую процедуру выбрать?
+          </h2>
+          <p class="text-[#374151] text-xs sm:text-base mt-2">
+            Ответьте на 3 простых вопроса и получите персональную рекомендацию от Виктории и <strong class="text-[#1F332A] font-bold">подарок к первому визиту</strong>!
+          </p>
+
+          <!-- Step Progress bar -->
+          <div class="mt-4 sm:mt-6 flex items-center justify-center gap-2">
+            <div id="quiz-step-dot-1" class="w-8 h-2 rounded-full bg-[#1F332A] transition-all"></div>
+            <div id="quiz-step-dot-2" class="w-8 h-2 rounded-full bg-[#E5E0D8] transition-all"></div>
+            <div id="quiz-step-dot-3" class="w-8 h-2 rounded-full bg-[#E5E0D8] transition-all"></div>
+          </div>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-content">
+
+          <!-- QUESTION 1 -->
+          <div id="quiz-step-1" class="quiz-step block">
+            <h3 class="text-base sm:text-lg font-bold text-[#1F2421] mb-3 sm:mb-4 text-center">
+              Шаг 1 из 3: Какая ваша главная цель визита?
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <button type="button" onclick="selectQuizAnswer(1, 'Снять боль и зажимы в спине / шее')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">1</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Снять боль и зажимы</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Болит спина, шея, забиты плечи, спазмы</div>
+                </div>
+              </button>
+
+              <button type="button" onclick="selectQuizAnswer(1, 'Тотальный релакс и снятие стресса')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">2</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Тотально расслабиться</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Перезагрузка головы, антистресс, аромат масел</div>
+                </div>
+              </button>
+
+              <button type="button" onclick="selectQuizAnswer(1, 'Восстановление после гор (Бештау / Машук) или спорта')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">3</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">После гор и хайкинга</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Разгрузка забитых ног, стоп, поясницы</div>
+                </div>
+              </button>
+
+              <button type="button" onclick="selectQuizAnswer(1, 'Моделирование фигуры / Лицо / Starvac')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">4</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Коррекция фигуры или лицо</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Антицеллюлитный, Starvac, буккальный массаж</div>
+                </div>
+              </button>
+
+              <button type="button" onclick="selectQuizAnswer(1, 'Романтический SPA для двоих с бочкой')" class="min-h-[48px] sm:col-span-2 quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-[#F7EFE6] text-[#7A5229] flex items-center justify-center flex-shrink-0 font-bold text-sm">5</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">СПА для двоих</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Кедровая бочка, массаж, уютный вечер для пары</div>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- QUESTION 2 -->
+          <div id="quiz-step-2" class="quiz-step hidden">
+            <h3 class="text-base sm:text-lg font-bold text-[#1F2421] mb-3 sm:mb-4 text-center">
+              Шаг 2 из 3: Какую интенсивность проработки вы предпочитаете?
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <button type="button" onclick="selectQuizAnswer(2, 'Мягкая релакс-техника')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">А</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Мягкая релакс-техника</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Плавные движения, комфорт без боли</div>
+                </div>
+              </button>
+
+              <button type="button" onclick="selectQuizAnswer(2, 'Средняя оздоровительная')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">Б</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Средняя оздоровительная</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Классика: баланс релакса и проработки мышц</div>
+                </div>
+              </button>
+
+              <button type="button" onclick="selectQuizAnswer(2, 'Глубокая силовая / Спортивная')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">В</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Глубокая силовая / спортивная</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Мощная проработка триггерных точек</div>
+                </div>
+              </button>
+
+              <button type="button" onclick="selectQuizAnswer(2, 'Аппаратная методика (Starvac / кавитация)')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">Г</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Аппаратные методики</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Вакуум, микротоки, лимфодренаж</div>
+                </div>
+              </button>
+            </div>
+            <div class="mt-4 flex justify-between">
+              <button type="button" onclick="goQuizStep(1)" class="min-h-[44px] text-xs font-semibold text-[#374151] hover:text-[#1F332A] flex items-center gap-1">
+                ← Назад к шагу 1
+              </button>
+            </div>
+          </div>
+
+          <!-- QUESTION 3 -->
+          <div id="quiz-step-3" class="quiz-step hidden">
+            <h3 class="text-base sm:text-lg font-bold text-[#1F2421] mb-3 sm:mb-4 text-center">
+              Шаг 3 из 3: Есть ли дополнительные пожелания к процедуре?
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <button type="button" onclick="selectQuizAnswer(3, 'Обязательно распаривание в кедровой бочке')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-[#F7EFE6] text-[#7A5229] flex items-center justify-center flex-shrink-0 font-bold text-sm">🌲</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Хочу кедровую бочку</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Фитопар с алтайскими травами перед массажем</div>
+                </div>
+              </button>
+
+              <button type="button" onclick="selectQuizAnswer(3, 'Хочу совместить с массажем лица')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center flex-shrink-0 font-bold text-sm">✨</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Добавить массаж лица</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Скульптурный или буккальный лифтинг</div>
+                </div>
+              </button>
+
+              <button type="button" onclick="selectQuizAnswer(3, 'Главное — быстрое снятие боли и душ')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">🚿</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Быстро снять зажим + душ</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Фокус на больной зоне и свежесть после сеанса</div>
+                </div>
+              </button>
+
+              <button type="button" onclick="selectQuizAnswer(3, 'Доверяю выбор Виктории на месте')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0 font-bold text-sm">🤍</span>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Доверяю мастеру</div>
+                  <div class="text-xs text-[#374151] mt-0.5">Определим оптимальную технику при осмотре</div>
+                </div>
+              </button>
+            </div>
+            <div class="mt-4 flex justify-between">
+              <button type="button" onclick="goQuizStep(2)" class="min-h-[44px] text-xs font-semibold text-[#374151] hover:text-[#1F332A] flex items-center gap-1">
+                ← Назад к шагу 2
+              </button>
+            </div>
+          </div>
+
+          <!-- RESULT CONTAINER -->
+          <div id="quiz-result" class="hidden">
+            <div class="bg-gradient-to-br from-sage-50 via-cream-100 to-[#F7EFE6] border border-[#D9C4AC] rounded-2xl p-5 sm:p-8 text-center">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 bg-emerald-100 text-emerald-800 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-sm">
+                <i data-lucide="check-check" class="w-7 h-7 sm:w-8 sm:h-8"></i>
+              </div>
+
+              <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229]">Идеальный выбор для вас</span>
+              <h4 id="quiz-recommended-title" class="font-serif text-xl sm:text-3xl font-bold text-[#1F2421] mt-1 mb-2 sm:mb-3">
+                Авторский оздоровительный массаж + Кедровая бочка
+              </h4>
+              <p id="quiz-recommended-desc" class="text-xs sm:text-sm text-[#2D3748] max-w-lg mx-auto mb-5 sm:mb-6 leading-relaxed">
+                Комплекс идеально снимет напряжение мышц, восстановит кровообращение и глубоко расслабит нервную систему.
+              </p>
+
+              <div class="inline-flex items-center gap-2 bg-white border border-[#D9C4AC] px-3.5 py-2 rounded-xl shadow-sm mb-5 sm:mb-6 text-xs sm:text-sm text-[#1F2421]">
+                <i data-lucide="gift" class="w-4 h-4 sm:w-5 sm:h-5 text-[#8A633A] flex-shrink-0"></i>
+                <span><strong>Ваш подарок:</strong> Фиточай со сбором трав Кавказа + скидка 10% на 1-й сеанс</span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a id="quiz-whatsapp-btn" href="#" target="_blank" class="min-h-[48px] w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md transition-all">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.541 1.849.82 2.796.82 3.183 0 5.769-2.587 5.769-5.767 0-3.181-2.586-5.766-5.769-5.766zm3.374 8.163c-.144.405-.837.774-1.17.823-.313.046-.704.072-2.072-.493-1.636-.677-2.67-2.339-2.752-2.449-.082-.109-.661-.881-.661-1.68 0-.798.421-1.192.571-1.353.15-.16.329-.2.439-.2.11 0 .22.001.315.006.102.004.237-.039.37.28.14.336.478 1.164.52 1.25.042.086.07.187.014.3-.056.113-.084.184-.167.282-.084.099-.176.221-.252.298-.084.084-.172.176-.074.344.098.168.437.721.938 1.167.644.574 1.187.752 1.355.836.168.084.267.07.366-.042.099-.113.421-.49.533-.659.112-.168.225-.141.378-.084.153.056.97.457 1.137.541.168.084.28.127.322.197.042.07.042.408-.102.813zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.436 5.176L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                  <span>Забронировать с бонусом в WhatsApp</span>
+                </a>
+
+                <button type="button" onclick="restartQuiz()" class="min-h-[44px] w-full sm:w-auto text-xs font-semibold text-[#374151] hover:text-[#1F332A] py-2 px-3">
+                  Пройти тест заново
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       5. CATALOG OF SERVICES WITH ACCORDION & HORIZONTAL APP-STYLE TABS
+       ========================================================================= -->
+  <section id="services" class="py-14 lg:py-24 bg-cream-200/80 border-t border-[#E5E0D8]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3.5 py-1 rounded-full border border-[#D9C4AC]">
+          Прайс и программы
+        </span>
+        <h2 class="font-serif text-2xl sm:text-5xl text-[#1F2421] font-bold mt-2 sm:mt-3">
+          Каталог услуг студии
+        </h2>
+        <p class="text-[#374151] text-xs sm:text-lg mt-2">
+          Все процедуры проводятся на анатомическом столе с подогревом, с использованием премиальных масел и натуральных фитосборов.
+        </p>
+
+        <!-- Category Horizontal Scroll Chip Bar on Mobile / Centered on Desktop -->
+        <div class="mt-6 flex overflow-x-auto whitespace-nowrap no-scrollbar py-2 px-1 snap-x gap-2 sm:flex-wrap sm:justify-center sm:overflow-visible -mx-4 px-4 sm:mx-auto sm:max-w-4xl" id="services-tabs-container">
+          <button onclick="switchTab('tab-health', this)" id="btn-tab-health" class="tab-btn active min-h-[44px] px-4 sm:px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center gap-2 flex-shrink-0 snap-start">
+            <i data-lucide="activity" class="w-4 h-4"></i>
+            <span>Оздоровительные & Спорт</span>
+          </button>
+          
+          <button onclick="switchTab('tab-spa', this)" id="btn-tab-spa" class="tab-btn min-h-[44px] px-4 sm:px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center gap-2 flex-shrink-0 snap-start">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Релакс & SPA-программы</span>
+          </button>
+
+          <button onclick="switchTab('tab-body', this)" id="btn-tab-body" class="tab-btn min-h-[44px] px-4 sm:px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center gap-2 flex-shrink-0 snap-start">
+            <i data-lucide="flame" class="w-4 h-4"></i>
+            <span>Коррекция & Аппаратные</span>
+          </button>
+
+          <button onclick="switchTab('tab-face', this)" id="btn-tab-face" class="tab-btn min-h-[44px] px-4 sm:px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center gap-2 flex-shrink-0 snap-start">
+            <i data-lucide="smile" class="w-4 h-4"></i>
+            <span>Скульптурирование лица</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 1: HEALTH & SPORT (Top 3 visible, rest expandable) -->
+      <div id="tab-health" class="tab-pane block">
+        <!-- Top 3 Services -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          
+          <!-- Card 1 -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-1 rounded-md border border-sage-200">
+                  Классика оздоровления
+                </span>
+                <span class="text-xs font-bold text-[#7A5229] bg-[#F7EFE6] px-2.5 py-0.5 rounded-full border border-[#D9C4AC] flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 60 / 90 мин
+                </span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2 group-hover:text-[#1F332A] transition-colors">
+                Общий оздоровительный массаж
+              </h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">
+                Комплексная проработка всего тела: спина, ШВЗ, руки, ноги и стопы. Устраняет гипертонус, улучшает циркуляцию лимфы и сон.
+              </p>
+              
+              <div class="space-y-1.5 py-3 border-y border-[#E5E0D8] text-xs">
+                <div><strong class="text-[#1F2421]">Для кого:</strong> <span class="text-[#374151]">При общей усталости, сидячей работе, стрессе</span></div>
+                <div><strong class="text-[#1F2421]">Результат:</strong> <span class="text-emerald-800 font-semibold">Лёгкость во всём теле, снятие зажимов</span></div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] text-[#4B5563] block font-medium">Стоимость:</span>
+                <span class="text-lg sm:text-xl font-bold text-[#111827]">от 2 500 ₽</span>
+              </div>
+              <button onclick="openBookingModal('Общий оздоровительный массаж')" class="min-h-[44px] inline-flex items-center gap-1.5 bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-colors cursor-pointer">
+                <span>Записаться</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Deep Sports (Mountain) -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-[#8A633A]/80 shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group relative">
+            <div class="absolute -top-3 right-6 bg-[#8A633A] text-white text-[10px] uppercase font-bold tracking-wider px-3 py-0.5 rounded-full shadow-sm">
+              Выбор спортсменов
+            </div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
+                  Глубокая проработка
+                </span>
+                <span class="text-xs font-bold text-[#7A5229] bg-[#F7EFE6] px-2.5 py-0.5 rounded-full border border-[#D9C4AC] flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 60 / 90 мин
+                </span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2 group-hover:text-[#1F332A] transition-colors">
+                Глубокий спортивный массаж
+              </h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">
+                Интенсивная силовая техника для глубоких мышечных слоёв и фасций. Идеально снимает крепатуру после гор Бештау и Машука.
+              </p>
+              
+              <div class="space-y-1.5 py-3 border-y border-[#E5E0D8] text-xs">
+                <div><strong class="text-[#1F2421]">Для кого:</strong> <span class="text-[#374151]">Бегуны, туристы, хайкеры, нагрузки</span></div>
+                <div><strong class="text-[#1F2421]">Результат:</strong> <span class="text-emerald-800 font-semibold">Снятие забитости ног и поясницы</span></div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] text-[#4B5563] block font-medium">Стоимость:</span>
+                <span class="text-lg sm:text-xl font-bold text-[#111827]">от 2 800 ₽</span>
+              </div>
+              <button onclick="openBookingModal('Глубокий спортивный массаж')" class="min-h-[44px] inline-flex items-center gap-1.5 bg-[#8A633A] hover:bg-[#72512F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-colors cursor-pointer">
+                <span>Записаться</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Back & Neck -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-1 rounded-md border border-sage-200">
+                  Анти-Боль
+                </span>
+                <span class="text-xs font-bold text-[#7A5229] bg-[#F7EFE6] px-2.5 py-0.5 rounded-full border border-[#D9C4AC] flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 45 мин
+                </span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2 group-hover:text-[#1F332A] transition-colors">
+                Массаж спины и ШВЗ
+              </h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">
+                Прицельная проработка трапеций, подлопаточной зоны, шеи и поясницы. Снимает «компьютерную шею» и головную боль от зажимов.
+              </p>
+              
+              <div class="space-y-1.5 py-3 border-y border-[#E5E0D8] text-xs">
+                <div><strong class="text-[#1F2421]">Для кого:</strong> <span class="text-[#374151]">Офисные работники, боли в шее и лопатках</span></div>
+                <div><strong class="text-[#1F2421]">Результат:</strong> <span class="text-emerald-800 font-semibold">Облегчение, свободный поворот головы</span></div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] text-[#4B5563] block font-medium">Стоимость:</span>
+                <span class="text-lg sm:text-xl font-bold text-[#111827]">от 1 800 ₽</span>
+              </div>
+              <button onclick="openBookingModal('Массаж спины и ШВЗ')" class="min-h-[44px] inline-flex items-center gap-1.5 bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-colors cursor-pointer">
+                <span>Записаться</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hidden Cards 4 & 5 (Expandable accordion) -->
+        <div id="tab-health-more" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-5 sm:mt-6">
+          
+          <!-- Card 4: Legs & Feet -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-1 rounded-md border border-sage-200">
+                  Лёгкость шага
+                </span>
+                <span class="text-xs font-bold text-[#7A5229] bg-[#F7EFE6] px-2.5 py-0.5 rounded-full border border-[#D9C4AC] flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 40 / 60 мин
+                </span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">
+                Массаж ног и стоп (Рефлексотерапия)
+              </h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">
+                Снятие отёков, проработка подошвенной фасции, ахилла, икроножных мышц и бедер с охлаждающим фитобальзамом.
+              </p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg font-bold text-[#111827]">от 1 700 ₽</span>
+              <button onclick="openBookingModal('Массаж ног и стоп')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Card 5: Lymphatic & Visceral -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-1 rounded-md border border-sage-200">
+                  Детокс & Баланс
+                </span>
+                <span class="text-xs font-bold text-[#7A5229] bg-[#F7EFE6] px-2.5 py-0.5 rounded-full border border-[#D9C4AC] flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 60 / 80 мин
+                </span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">
+                Лимфодренажный и висцеральный массаж
+              </h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">
+                Мягкая техника разгона застоявшейся лимфы и остеопатическая работа с животом. Улучшает метаболизм и пищеварение.
+              </p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg font-bold text-[#111827]">от 2 700 ₽</span>
+              <button onclick="openBookingModal('Лимфодренажный и висцеральный массаж')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Toggle Button for Tab 1 -->
+        <div class="mt-6 text-center">
+          <button type="button" onclick="toggleMoreServices('tab-health', 2)" id="btn-more-tab-health" class="min-h-[44px] inline-flex items-center gap-2 bg-white hover:bg-cream-200 text-[#1F332A] border border-[#D9C4AC] font-bold text-xs sm:text-sm px-6 py-3 rounded-2xl shadow-sm transition-all cursor-pointer">
+            <span class="btn-text">Показать ещё услуги категории (2)</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 2: RELAX & SPA (Top 3 visible, rest expandable) -->
+      <div id="tab-spa" class="tab-pane hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          
+          <!-- SPA 1: Couples -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-[#8A633A] shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group relative">
+            <div class="absolute -top-3 right-6 bg-[#8A633A] text-white text-[10px] uppercase font-bold tracking-wider px-3 py-0.5 rounded-full shadow-sm">
+              Премиум выбор пар
+            </div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-purple-900 bg-purple-50 px-2.5 py-1 rounded-md border border-purple-200">
+                  Романтический ритуал
+                </span>
+                <span class="text-xs font-bold text-[#7A5229] bg-[#F7EFE6] px-2.5 py-0.5 rounded-full border border-[#D9C4AC] flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 120 мин
+                </span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2 group-hover:text-[#1F332A] transition-colors">
+                SPA для двоих «Гармония чувств»
+              </h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">
+                Распаривание в кедровой бочке с горными травами, расслабляющий массаж всего тела, ароматерапия эфирными маслами и церемония горного чая с мёдом.
+              </p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] text-[#4B5563] block font-medium">За двоих:</span>
+                <span class="text-lg sm:text-xl font-bold text-[#111827]">от 6 500 ₽</span>
+              </div>
+              <button onclick="openBookingModal('SPA для двоих Гармония чувств')" class="min-h-[44px] bg-[#8A633A] hover:bg-[#72512F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Забронировать</button>
+            </div>
+          </div>
+
+          <!-- SPA 2: Cedar Barrel -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-1 rounded-md border border-sage-200">
+                  Сибирский кедр
+                </span>
+                <span class="text-xs font-bold text-[#7A5229] bg-[#F7EFE6] px-2.5 py-0.5 rounded-full border border-[#D9C4AC] flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 30-40 мин
+                </span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2 group-hover:text-[#1F332A] transition-colors">
+                Фитобочка из сибирского кедра
+              </h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">
+                Распаривание тела в кедровой бочке с фитосборами (чабрец, эвкалипт, мята, душица). Голова снаружи — без нагрузки на сосуды мозга.
+              </p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg sm:text-xl font-bold text-[#111827]">от 1 200 ₽</span>
+              <button onclick="openBookingModal('Кедровая бочка с фитосборами')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+          <!-- SPA 3: Infrared Sauna -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-1 rounded-md border border-sage-200">
+                  Мягкое тепло
+                </span>
+                <span class="text-xs font-bold text-[#7A5229] bg-[#F7EFE6] px-2.5 py-0.5 rounded-full border border-[#D9C4AC] flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 30-40 мин
+                </span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2 group-hover:text-[#1F332A] transition-colors">
+                Инфракрасная кабина (Детокс)
+              </h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">
+                Мягкие инфракрасные волны глубоко прогревают мышцы и суставы на глубину до 4 см без тяжелого пара. Ускоряет метаболизм и снимает спазмы.
+              </p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg sm:text-xl font-bold text-[#111827]">от 1 200 ₽</span>
+              <button onclick="openBookingModal('Инфракрасная кабина')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hidden Cards (Expandable) -->
+        <div id="tab-spa-more" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-5 sm:mt-6">
+          <!-- SPA 4: Head & Aroma -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-1 rounded-md border border-sage-200">Антистресс</span>
+                <span class="text-xs font-bold text-[#7A5229]">45 мин</span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">СПА головы и аромарелакс</h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">Мягкий массаж апоневроза головы, ушей и шеи с эфирными маслами лаванды и бергамота.</p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg font-bold text-[#111827]">от 1 900 ₽</span>
+              <button onclick="openBookingModal('СПА головы и аромарелакс')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+          <!-- SPA 5: Men SPA -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-100 px-2.5 py-1 rounded-md border border-sage-300">Мужской уход</span>
+                <span class="text-xs font-bold text-[#7A5229]">90-120 мин</span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">Мужской комплекс «Сила гор»</h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">Распаривание в сибирской бочке + мощный силовой массаж спины и ног + горный чай.</p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg font-bold text-[#111827]">от 3 800 ₽</span>
+              <button onclick="openBookingModal('Мужской СПА-комплекс Сила гор')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Toggle Button for Tab 2 -->
+        <div class="mt-6 text-center">
+          <button type="button" onclick="toggleMoreServices('tab-spa', 2)" id="btn-more-tab-spa" class="min-h-[44px] inline-flex items-center gap-2 bg-white hover:bg-cream-200 text-[#1F332A] border border-[#D9C4AC] font-bold text-xs sm:text-sm px-6 py-3 rounded-2xl shadow-sm transition-all cursor-pointer">
+            <span class="btn-text">Показать ещё услуги категории (2)</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 3: BODY CONTOURING & HARDWARE -->
+      <div id="tab-body" class="tab-pane hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          
+          <!-- Body 1: Starvac -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-rose-300 shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-rose-900 bg-rose-50 px-2 py-0.5 rounded-md border border-rose-200">Аппаратный хит</span>
+                <span class="text-xs font-bold text-[#7A5229]">45-60 мин</span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">Вакуумно-роликовый массаж (Starvac)</h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">Французская запатентованная технология: мощный лимфодренаж, разрушение жировых капсул, подтяжка тургора кожи без синяков.</p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg sm:text-xl font-bold text-[#111827]">от 2 200 ₽</span>
+              <button onclick="openBookingModal('Starvac аппаратный массаж')" class="min-h-[44px] bg-rose-800 hover:bg-rose-900 text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Body 2: Manual Anti-cellulite -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-0.5 rounded-md border border-sage-200">Ручная лепка</span>
+                <span class="text-xs font-bold text-[#7A5229]">60 мин</span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">Антицеллюлитный ручной массаж</h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">Глубокая ручная проработка бёдер, ягодиц, боков и живота. Улучшает микроциркуляцию и выводит лишнюю воду.</p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg sm:text-xl font-bold text-[#111827]">от 2 400 ₽</span>
+              <button onclick="openBookingModal('Антицеллюлитный ручной массаж')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Body 3: Cavitation & Pressotherapy -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-0.5 rounded-md border border-sage-200">Аппаратный комплекс</span>
+                <span class="text-xs font-bold text-[#7A5229]">60 мин</span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">Кавитация + Прессотерапия</h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">Ультразвуковое расщепление жировых отложений в сочетании с мощным аппаратным лимфодренажем ног и тела.</p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg sm:text-xl font-bold text-[#111827]">от 2 600 ₽</span>
+              <button onclick="openBookingModal('Кавитация и прессотерапия')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hidden Card (Expandable) -->
+        <div id="tab-body-more" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-5 sm:mt-6">
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-0.5 rounded-md border border-sage-200">Талассотерапия</span>
+                <span class="text-xs font-bold text-[#7A5229]">60 мин</span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">Скрабирование и обёртывания</h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">Мягкий пилинг с морской солью и минералами, нанесение водорослевой маски под термоодеяло.</p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg font-bold text-[#111827]">от 2 500 ₽</span>
+              <button onclick="openBookingModal('Скрабирование и обертывания')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <button type="button" onclick="toggleMoreServices('tab-body', 1)" id="btn-more-tab-body" class="min-h-[44px] inline-flex items-center gap-2 bg-white hover:bg-cream-200 text-[#1F332A] border border-[#D9C4AC] font-bold text-xs sm:text-sm px-6 py-3 rounded-2xl shadow-sm transition-all cursor-pointer">
+            <span class="btn-text">Показать ещё услуги категории (1)</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 4: FACIAL SCULPTING (All 3 key services visible) -->
+      <div id="tab-face" class="tab-pane hidden">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+          
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-[#D9C4AC] shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-2.5 py-1 rounded-md border border-[#D9C4AC]">Безоперационный лифтинг</span>
+                <span class="text-xs font-bold text-[#7A5229]">50-60 мин</span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">Буккальный и лифтинг-массаж лица</h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">Глубокая проработка мышц лица, включая интраоральную технику. Снимает спазм жевательных мышц и очерчивает скулы.</p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg sm:text-xl font-bold text-[#111827]">от 2 400 ₽</span>
+              <button onclick="openBookingModal('Буккальный и лифтинг массаж лица')" class="min-h-[44px] bg-[#8A633A] hover:bg-[#72512F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-1 rounded-md border border-sage-200">Фасциальное моделирование</span>
+                <span class="text-xs font-bold text-[#7A5229]">60 мин</span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">Витапластика лица и шеи</h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">Мягкая остеопатическая техника работы с фасциями черепа и шеи. Восстанавливает естественную статику шеи и симметрию лица.</p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg sm:text-xl font-bold text-[#111827]">от 2 600 ₽</span>
+              <button onclick="openBookingModal('Витапластика лица и шеи')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card hover:shadow-elevated transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F332A] bg-sage-50 px-2.5 py-1 rounded-md border border-sage-200">Аппаратный уход</span>
+                <span class="text-xs font-bold text-[#7A5229]">45 мин</span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-2">RF-лифтинг и микротоки</h3>
+              <p class="text-[13px] text-[#374151] leading-relaxed mb-4">Стимуляция собственного коллагена и эластина, аппаратный тонус лицевых мышц и плотность кожи.</p>
+            </div>
+            <div class="mt-4 pt-2 flex items-center justify-between">
+              <span class="text-lg sm:text-xl font-bold text-[#111827]">от 2 500 ₽</span>
+              <button onclick="openBookingModal('RF-лифтинг и микротоки')" class="min-h-[44px] bg-[#1F332A] hover:bg-[#16251F] text-white text-xs font-semibold px-4 py-2.5 rounded-xl">Записаться</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       6. ABOUT MASTER VICTORIA & STUDIO SPACE
+       ========================================================================= -->
+  <section id="about" class="py-14 lg:py-24 relative overflow-hidden bg-white/70 border-t border-[#E5E0D8]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+        
+        <!-- Left Column: Master Photo & Badge (No mobile overflow) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-cream-300">
+            <img 
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80" 
+              alt="Массажист Виктория в Пятигорске" 
+              class="w-full h-[420px] sm:h-[530px] object-cover object-top"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1A15]/90 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-5 left-5 right-5 text-white">
+              <div class="font-serif text-2xl sm:text-3xl font-bold">Виктория</div>
+              <div class="text-[#D9C4AC] text-xs sm:text-sm font-bold tracking-wider uppercase mt-0.5 sm:mt-1">
+                Основатель студии & Ведущий топ-массажист
+              </div>
+              <p class="text-xs sm:text-sm text-[#E5E7EB] mt-1.5 leading-relaxed font-normal">
+                Сертифицированный специалист с медицинским пониманием биомеханики тела и кинезиологии.
+              </p>
+            </div>
+          </div>
+
+          <!-- Badge on photo: High contrast, legible typography, mobile-safe positioning -->
+          <div class="absolute top-3 right-3 sm:-top-4 sm:-right-4 bg-[#13201A]/95 backdrop-blur-md text-white p-3.5 sm:p-4.5 rounded-2xl shadow-2xl border border-[#2D4A3E] max-w-[200px] sm:max-w-[210px]">
+            <div class="font-bold text-[#EAD6BD] text-xs sm:text-base leading-tight">8+ лет практики</div>
+            <div class="text-[11px] sm:text-xs text-[#E5E7EB] mt-0.5 sm:mt-1 leading-snug">Тысячи довольных гостей и снятых мышечных зажимов</div>
+          </div>
+        </div>
+
+        <!-- Right Column: Philosophy, Enlarged Quote, Studio Equipment -->
+        <div class="lg:col-span-7 flex flex-col justify-center">
+          
+          <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3.5 py-1.5 rounded-full border border-[#D9C4AC] inline-block w-fit mb-3 sm:mb-4">
+            Пространство заботы и тишины
+          </span>
+
+          <h2 class="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421] leading-tight mb-4 sm:mb-5">
+            «Никаких шаблонных поглаживаний — только чуткая, глубокая и результативная работа»
+          </h2>
+
+          <!-- Quote Block: 18–20px desktop, 16px mobile, medium weight, 4px solid accent border -->
+          <div class="relative pl-4 sm:pl-6 border-l-4 border-[#8A633A] my-3 sm:my-4 py-1 font-serif text-base sm:text-lg lg:text-xl text-[#1F2421] font-medium leading-relaxed">
+            «Я искренне верю, что каждое тело индивидуально. Кто-то приходит с ноющей спиной после офиса, кто-то после забега на вершину Бештау, а кому-то просто жизненно необходимы полтора часа тишины, заботы и тепла. Я слышу ваши мышцы и работаю именно с причиной зажима, а не просто глажу кожу».
+            <div class="mt-2 sm:mt-3 text-sm sm:text-base font-sans font-bold text-[#1F332A]">— Виктория</div>
+          </div>
+
+          <!-- 4 Studio Equipment Checklist Cards (Enlarged fonts: title 15-16px bold, desc 13-14px) -->
+          <div class="mt-5 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            
+            <div class="flex items-start gap-3 bg-white p-3.5 sm:p-5 rounded-2xl border border-[#E5E0D8] shadow-sm">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shower-head" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <strong class="text-[#1F2421] block font-bold text-[14px] sm:text-base mb-0.5">Комфортный душ</strong>
+                <p class="text-[12px] sm:text-[14px] text-[#374151] leading-relaxed">Банная косметика, свежие хлопковые полотенца, фен и одноразовое бельё.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-3.5 sm:p-5 rounded-2xl border border-[#E5E0D8] shadow-sm">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#F7EFE6] text-[#7A5229] flex items-center justify-center flex-shrink-0">
+                <i data-lucide="tree-pine" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <strong class="text-[#1F2421] block font-bold text-[14px] sm:text-base mb-0.5">Кедровая бочка</strong>
+                <p class="text-[12px] sm:text-[14px] text-[#374151] leading-relaxed">Настоящий алтайский кедр с горячим паром из целебных горных травяных сборов.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-3.5 sm:p-5 rounded-2xl border border-[#E5E0D8] shadow-sm">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="droplet" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <strong class="text-[#1F2421] block font-bold text-[14px] sm:text-base mb-0.5">Премиальные масла</strong>
+                <p class="text-[12px] sm:text-[14px] text-[#374151] leading-relaxed">Натуральные гипоаллергенные растительные масла холодного отжима без липкости.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-3.5 sm:p-5 rounded-2xl border border-[#E5E0D8] shadow-sm">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="car" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <strong class="text-[#1F2421] block font-bold text-[14px] sm:text-base mb-0.5">Своя парковка и вход</strong>
+                <p class="text-[12px] sm:text-[14px] text-[#374151] leading-relaxed">Просп. Калинина, 19. Парковка прямо перед входом, без шлагбаумов и пробок.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Button -->
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+            <button onclick="openBookingModal('Запись к Виктории')" class="min-h-[48px] w-full sm:w-auto bg-[#1F332A] hover:bg-[#16251F] text-white font-semibold text-sm px-7 py-3.5 rounded-xl shadow-md transition-all">
+              Записаться на приём к Виктории
+            </button>
+            <span class="text-xs sm:text-sm text-[#374151] font-semibold flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+              <span>Стерильность и чистота 100%</span>
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       7. SPECIAL SECTION: MOUNTAIN RECOVERY (Машук, Бештау)
+       ========================================================================= -->
+  <section id="mountains" class="py-14 lg:py-20 relative bg-[#13201A] text-cream-100 overflow-hidden">
+    <div class="absolute inset-0 opacity-15 pointer-events-none">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80" alt="Горы Кавказа Машук Бештау" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-gradient-to-r from-[#0F1A15]/95 to-[#13201A]/95 border border-[#8A633A]/40 rounded-3xl p-5 sm:p-10 lg:p-12 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+          
+          <div class="lg:col-span-8">
+            <div class="inline-flex items-center gap-2 bg-[#1F332A] text-[#EAD6BD] border border-[#8A633A]/60 px-3 py-1 rounded-full text-xs font-bold mb-3 sm:mb-4">
+              <i data-lucide="mountain" class="w-4 h-4 text-[#D9C4AC]"></i>
+              <span>Специально для хайкеров и спортсменов КМВ</span>
+            </div>
+
+            <h2 class="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
+              Восстановление после восхождений на Машук и Бештау
+            </h2>
+
+            <p class="text-[#E5E7EB] text-xs sm:text-base leading-relaxed mb-5 font-normal">
+              Покорили Бештау (1401 м) или прошли 20 000 шагов? Не терпите ноющую крепатуру. Специальный экспресс-комплекс <strong class="text-[#D9C4AC] font-semibold">«Второе дыхание горца»</strong> вернёт вашим ногам и спине лёгкость за 1 визит!
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-4 mb-6">
+              <div class="bg-[#1F332A]/90 p-3.5 sm:p-4 rounded-xl border border-[#2E4D3F]">
+                <div class="text-[#EAD6BD] font-bold text-sm sm:text-base mb-0.5">1. Фитопар</div>
+                <div class="text-xs text-[#E5E7EB] leading-relaxed">15 минут в кедровой бочке прогревают связки</div>
+              </div>
+              <div class="bg-[#1F332A]/90 p-3.5 sm:p-4 rounded-xl border border-[#2E4D3F]">
+                <div class="text-[#EAD6BD] font-bold text-sm sm:text-base mb-0.5">2. Спортивный массаж</div>
+                <div class="text-xs text-[#E5E7EB] leading-relaxed">Глубокая проработка икр, квадрицепсов и стоп</div>
+              </div>
+              <div class="bg-[#1F332A]/90 p-3.5 sm:p-4 rounded-xl border border-[#2E4D3F]">
+                <div class="text-[#EAD6BD] font-bold text-sm sm:text-base mb-0.5">3. Горный чай</div>
+                <div class="text-xs text-[#E5E7EB] leading-relaxed">Фитосбор с чабрецом и пятигорским мёдом</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3">
+              <a href="https://wa.me/79620230888?text=Здравствуйте!%20Хочу%20записаться%20на%20программу%20восстановления%20после%20гор%20(Бештау/Машук)" target="_blank" class="min-h-[48px] w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#8A633A] hover:bg-[#72512F] text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-lg transition-all">
+                <i data-lucide="zap" class="w-4 h-4 fill-current"></i>
+                <span>Записаться на восстановление ног</span>
+              </a>
+              <span class="text-xs text-[#D1D5DB] font-medium">Работаем до 23:00 — успеете после спуска!</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 hidden lg:block text-center">
+            <div class="relative mx-auto w-64 h-64 rounded-full border-4 border-[#8A633A]/50 p-2 overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80" alt="Спортивный массаж ног" class="w-full h-full object-cover rounded-full" loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       8. GIFT CERTIFICATES BLOCK
+       ========================================================================= -->
+  <section id="certificates" class="py-14 lg:py-24 bg-cream-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left: Certificate Visual Mockup -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative bg-gradient-to-br from-cream-50 to-cream-200 border-2 border-[#D9C4AC] rounded-3xl p-5 sm:p-10 shadow-elevated overflow-hidden">
+            <div class="absolute inset-2 border border-[#E5E0D8] rounded-2xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between mb-6 sm:mb-8">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-[#1F332A] text-[#D9C4AC] flex items-center justify-center font-serif font-bold text-sm">
+                  В
+                </div>
+                <span class="font-serif tracking-widest text-xs uppercase text-[#1F332A] font-bold">Студия массажа & SPA</span>
+              </div>
+              <span class="text-xs font-bold text-[#7A5229] bg-[#F7EFE6] px-2.5 py-0.5 rounded-full border border-[#D9C4AC]">
+                г. Пятигорск
+              </span>
+            </div>
+
+            <div class="text-center my-4 sm:my-6">
+              <span class="text-xs uppercase tracking-widest text-[#374151] block mb-1 font-semibold">Подарочный сертификат</span>
+              <div class="font-serif text-2xl sm:text-4xl font-bold text-[#1F2421] tracking-wide">
+                НА ВРЕМЯ ДЛЯ СЕБЯ
+              </div>
+              <p class="text-xs sm:text-sm text-[#374151] mt-2 sm:mt-3 max-w-sm mx-auto leading-relaxed">
+                Дарите незабываемые эмоции полного расслабления, здоровье и лёгкость в теле.
+              </p>
+            </div>
+
+            <div class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-[#E5E0D8] flex items-center justify-between text-xs text-[#374151] font-medium">
+              <div>Действует: <strong class="text-[#1F2421]">6 месяцев</strong></div>
+              <div>Сургучная печать • Конверт</div>
+            </div>
+          </div>
+
+          <div class="mt-2.5 sm:mt-0 sm:absolute sm:-bottom-4 sm:right-6 bg-white p-2.5 sm:p-3 rounded-xl shadow-lg border border-[#E5E0D8] text-xs flex items-center gap-2 font-semibold text-[#1F2421]">
+            <i data-lucide="send" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+            <span>Электронный за 5 минут в мессенджер</span>
+          </div>
+        </div>
+
+        <!-- Right: Certificate Details & Configuration -->
+        <div class="lg:col-span-6 flex flex-col justify-center">
+          
+          <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3.5 py-1.5 rounded-full border border-[#D9C4AC] inline-block w-fit mb-3">
+            Идеальный подарок
+          </span>
+
+          <h2 class="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421] mb-3 sm:mb-4">
+            Подарочный сертификат на массаж и SPA
+          </h2>
+
+          <p class="text-[#2D3748] text-xs sm:text-base leading-relaxed mb-5 font-normal">
+            Порадуйте близкого человека, маму или коллегу. Сертификат можно оформить на любую сумму или спа-программу.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+            <div class="bg-white p-3.5 sm:p-4 rounded-2xl border border-[#E5E0D8]">
+              <div class="font-bold text-[#1F2421] text-sm mb-1 flex items-center gap-1.5">
+                <i data-lucide="mail" class="w-4 h-4 text-[#8A633A]"></i>
+                <span>Электронный вид</span>
+              </div>
+              <p class="text-xs text-[#374151]">Красивый PDF в WhatsApp или Telegram за 5 минут.</p>
+            </div>
+
+            <div class="bg-white p-3.5 sm:p-4 rounded-2xl border border-[#E5E0D8]">
+              <div class="font-bold text-[#1F2421] text-sm mb-1 flex items-center gap-1.5">
+                <i data-lucide="gift" class="w-4 h-4 text-[#8A633A]"></i>
+                <span>Дизайнерский конверт</span>
+              </div>
+              <p class="text-xs text-[#374151]">Фактурная бумага, золотое тиснение и сургучная печать.</p>
+            </div>
+          </div>
+
+          <!-- Denomination presets -->
+          <div class="mb-5">
+            <span class="text-xs font-bold text-[#1F2421] block mb-2">Популярные номиналы:</span>
+            <div class="flex flex-wrap gap-2">
+              <button onclick="selectCertificateNominal('3 000 ₽')" class="min-h-[44px] cert-btn px-3.5 py-2 rounded-xl bg-white hover:bg-sage-50 text-[#1F2421] border border-[#E5E0D8] text-xs font-bold transition-all">
+                3 000 ₽
+              </button>
+              <button onclick="selectCertificateNominal('5 000 ₽')" class="min-h-[44px] cert-btn px-3.5 py-2 rounded-xl bg-white hover:bg-sage-50 text-[#1F2421] border border-[#E5E0D8] text-xs font-bold transition-all">
+                5 000 ₽
+              </button>
+              <button onclick="selectCertificateNominal('10 000 ₽')" class="min-h-[44px] cert-btn px-3.5 py-2 rounded-xl bg-white hover:bg-sage-50 text-[#1F2421] border border-[#E5E0D8] text-xs font-bold transition-all">
+                10 000 ₽
+              </button>
+              <button onclick="selectCertificateNominal('СПА для двоих (6 500 ₽)')" class="min-h-[44px] cert-btn px-3.5 py-2 rounded-xl bg-[#F7EFE6] text-[#7A5229] border border-[#D9C4AC] text-xs font-bold transition-all">
+                СПА для двоих
+              </button>
+            </div>
+          </div>
+
+          <a id="cert-order-link" href="https://wa.me/79620230888?text=Здравствуйте!%20Хочу%20оформить%20подарочный%20сертификат" target="_blank" class="min-h-[48px] inline-flex items-center justify-center gap-2 bg-[#1F332A] hover:bg-[#16251F] text-white font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md transition-all w-full sm:w-auto">
+            <i data-lucide="gift" class="w-4 h-4 text-[#D9C4AC]"></i>
+            <span>Оформить сертификат за 2 минуты</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       9. REAL GUEST REVIEWS SECTION (Рейтинг 5.0 на Яндекс Картах)
+       ========================================================================= -->
+  <section id="reviews" class="py-14 lg:py-24 bg-cream-200/90 border-t border-[#E5E0D8]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        <div class="inline-flex items-center gap-2 bg-white text-[#7A5229] border border-[#D9C4AC] px-3.5 py-1.5 rounded-full text-xs font-bold mb-3 shadow-sm">
+          <span class="flex text-amber-500">★★★★★</span>
+          <span>Рейтинг 5.0 на Яндекс Картах</span>
+        </div>
+        
+        <h2 class="font-serif text-2xl sm:text-5xl text-[#1F2421] font-bold">
+          Что говорят наши гости
+        </h2>
+        <p class="text-[#374151] text-xs sm:text-lg mt-2">
+          Более 40 проверенных отзывов. Гости возвращаются к Виктории из года в год и советуют друзьям.
+        </p>
+      </div>
+
+      <!-- Reviews Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6">
+        
+        <!-- Review 1: Lyudochka (Yaroslavl) -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#F7EFE6] text-[#7A5229] font-bold flex items-center justify-center text-sm border border-[#D9C4AC]">Л</div>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Людочка</div>
+                  <div class="text-[11px] text-[#4B5563]">г. Ярославль (гость КМВ)</div>
+                </div>
+              </div>
+              <div class="text-amber-500 text-sm">★★★★★</div>
+            </div>
+            <p class="text-xs sm:text-sm text-[#2D3748] leading-relaxed">
+              «После забега в горах Бештау ножки просто ожили! Получила лучший массаж и приятное общение. Виктория — мастер с большой буквы, чувствует каждый триггер. Очень рекомендую всем спортсменам!»
+            </p>
+          </div>
+          <div class="mt-3 pt-3 border-t border-[#E5E0D8] text-[11px] text-[#4B5563] flex items-center justify-between font-medium">
+            <span>Спортивный массаж ног</span>
+            <span class="text-[#1F332A] font-bold">Яндекс Карты</span>
+          </div>
+        </div>
+
+        <!-- Review 2: Lyudmila -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-sage-100 text-[#1F332A] font-bold flex items-center justify-center text-sm border border-sage-300">Л</div>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Людмила</div>
+                  <div class="text-[11px] text-[#4B5563]">Пятигорск</div>
+                </div>
+              </div>
+              <div class="text-amber-500 text-sm">★★★★★</div>
+            </div>
+            <p class="text-xs sm:text-sm text-[#2D3748] leading-relaxed">
+              «После долгих прогулок по Пятигорску спасли наши спины и ноги. Суперпрофессионально с глубокой проработкой мышц! Ушла тяжесть, которая мучила несколько недель. Огромное спасибо!»
+            </p>
+          </div>
+          <div class="mt-3 pt-3 border-t border-[#E5E0D8] text-[11px] text-[#4B5563] flex items-center justify-between font-medium">
+            <span>Массаж спины и ШВЗ</span>
+            <span class="text-[#1F332A] font-bold">Яндекс Карты</span>
+          </div>
+        </div>
+
+        <!-- Review 3: Dinara -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 border border-[#E5E0D8] shadow-card flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-900 font-bold flex items-center justify-center text-sm border border-rose-300">Д</div>
+                <div>
+                  <div class="font-bold text-[#1F2421] text-sm">Динара</div>
+                  <div class="text-[11px] text-[#4B5563]">Пятигорск</div>
+                </div>
+              </div>
+              <div class="text-amber-500 text-sm">★★★★★</div>
+            </div>
+            <p class="text-xs sm:text-sm text-[#2D3748] leading-relaxed">
+              «Виктория — лучший массажист! Кабинет чистый, уютный, светлый, много зелени. Всегда играет приятная музыка, очень комфортный душ. Хожу на буккальный массаж лица и кедровую бочку — результат потрясающий!»
+            </p>
+          </div>
+          <div class="mt-3 pt-3 border-t border-[#E5E0D8] text-[11px] text-[#4B5563] flex items-center justify-between font-medium">
+            <span>Буккальный массаж + Бочка</span>
+            <span class="text-[#1F332A] font-bold">Яндекс Карты</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Button Link to Yandex Maps -->
+      <div class="mt-8 sm:mt-12 text-center">
+        <a href="https://yandex.ru/maps/org/massazhny_salon/34951215519/" target="_blank" rel="noopener noreferrer" class="min-h-[48px] inline-flex items-center gap-2 bg-white hover:bg-cream-100 text-[#1F2421] border border-[#D9C4AC] font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-sm hover:shadow-md transition-all">
+          <span class="text-red-600 font-black">Я</span>
+          <span>Читать все 40+ отзывов на Яндекс Картах (★ 5.0)</span>
+          <i data-lucide="external-link" class="w-4 h-4 text-[#8A633A]"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       10. FAQ ACCORDION
+       ========================================================================= -->
+  <section id="faq" class="py-14 lg:py-24 bg-cream-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-xl mx-auto mb-8 sm:mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3.5 py-1 rounded-full border border-[#D9C4AC]">
+          Частые вопросы
+        </span>
+        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-[#1F2421] mt-2 sm:mt-3">
+          Всё, что важно знать перед визитом
+        </h2>
+        <p class="text-[#374151] text-xs sm:text-base mt-1.5 font-medium">
+          Мы позаботились о вашем максимальном комфорте и приватности.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="min-h-[48px] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-bold text-[#1F2421] text-sm sm:text-base focus:outline-none">
+            <span>Нужна ли предварительная запись?</span>
+            <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed border-t border-[#E5E0D8] pt-3">
+            Да, мы принимаем гостей по предварительной записи. Это позволяет выделить для каждого гостя персональное время без спешки, очередей и пересечений, подготовить кабинет и прогреть кедровую бочку.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="min-h-[48px] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-bold text-[#1F2421] text-sm sm:text-base focus:outline-none">
+            <span>Есть ли у вас душ?</span>
+            <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed border-t border-[#E5E0D8] pt-3">
+            Да! В студии оборудована чистая индивидуальная душевая комната со всеми принадлежностями (гель, шампунь, кондиционер, свежие хлопковые полотенца, фен). Принять душ можно до и после сеанса.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="min-h-[48px] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-bold text-[#1F2421] text-sm sm:text-base focus:outline-none">
+            <span>Что взять с собой на сеанс?</span>
+            <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed border-t border-[#E5E0D8] pt-3">
+            Ничего с собой брать не нужно! Мы предоставляем всё: одноразовое бельё, мягкие тапочки, простыни, махровые полотенца и резинки для волос.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="min-h-[48px] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-bold text-[#1F2421] text-sm sm:text-base focus:outline-none">
+            <span>Как добраться и где припарковаться?</span>
+            <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed border-t border-[#E5E0D8] pt-3">
+            Студия находится по адресу: г. Пятигорск, проспект Калинина, 19. У нас удобный заезд, отдельный вход с улицы и просторная бесплатная парковка прямо перед дверью студии.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="min-h-[48px] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-bold text-[#1F2421] text-sm sm:text-base focus:outline-none">
+            <span>Какие есть противопоказания к процедурам?</span>
+            <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed border-t border-[#E5E0D8] pt-3">
+            Стандартные временные противопоказания: острые воспалительные процессы, температура, тромбофлебит, ранний срок беременности (для силовых техник). Перед сеансом Виктория проводит опрос и подбирает технику строго под ваше самочувствие.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       11. CONTACTS & INTERACTIVE MAP (WITH GESTURE TRAP ELIMINATION)
+       ========================================================================= -->
+  <section id="contacts" class="py-14 lg:py-24 bg-cream-200/90 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3.5 py-1 rounded-full border border-[#D9C4AC]">
+          Ждём вас в гости
+        </span>
+        <h2 class="font-serif text-2xl sm:text-5xl font-bold text-[#1F2421] mt-2 sm:mt-3">
+          Контакты и расположение
+        </h2>
+        <p class="text-[#374151] text-xs sm:text-lg mt-2">
+          Центр Пятигорска, удобный заезд, парковка у входа и отдельный вход.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+        
+        <!-- Contact details Card -->
+        <div class="lg:col-span-5 bg-white rounded-3xl p-5 sm:p-8 border border-[#E5E0D8] shadow-card flex flex-col justify-between">
+          <div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mb-5">
+              Студия массажа & SPA Виктории
+            </h3>
+
+            <!-- Details list -->
+            <div class="space-y-4 text-sm">
+              
+              <!-- Address -->
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-[#4B5563] block font-medium">Адрес студии:</span>
+                  <span class="font-bold text-[#111827] text-sm sm:text-base">г. Пятигорск, просп. Калинина, 19</span>
+                  <p class="text-xs text-[#374151] mt-0.5">Отдельный вход с улицы, бесплатная парковка перед дверью</p>
+                  <button onclick="copyToClipboard('г. Пятигорск, проспект Калинина, 19', 'Адрес скопирован!')" class="mt-1 text-xs text-[#7A5229] font-bold hover:underline flex items-center gap-1 min-h-[32px]">
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i> Скопировать адрес
+                  </button>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="phone-call" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-[#4B5563] block font-medium">Телефон для записи:</span>
+                  <a href="tel:+79620230888" class="font-bold text-[#111827] text-lg sm:text-xl hover:text-[#1F332A] transition-colors block">
+                    +7 (962) 023-08-88
+                  </a>
+                  <p class="text-xs text-emerald-800 font-semibold mt-0.5">Принимаем звонки с 08:00 до 23:00</p>
+                </div>
+              </div>
+
+              <!-- Working Hours -->
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="clock" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-[#4B5563] block font-medium">График работы:</span>
+                  <span class="font-bold text-[#111827]">Ежедневно 08:00 – 23:00</span>
+                  <p class="text-xs text-[#374151]">Работаем без перерывов и выходных</p>
+                </div>
+              </div>
+
+              <!-- Direct Messengers -->
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="message-square" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-[#4B5563] block font-medium">Быстрая запись в чате:</span>
+                  <div class="flex items-center gap-2 mt-1">
+                    <a href="https://wa.me/79620230888" target="_blank" class="min-h-[44px] inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 border border-emerald-300 px-3.5 py-2 rounded-xl text-xs font-bold hover:bg-emerald-600 hover:text-white transition-all">
+                      <span>WhatsApp</span>
+                    </a>
+                    <a href="https://t.me/+79620230888" target="_blank" class="min-h-[44px] inline-flex items-center gap-1.5 bg-sky-50 text-sky-800 border border-sky-300 px-3.5 py-2 rounded-xl text-xs font-bold hover:bg-sky-600 hover:text-white transition-all">
+                      <span>Telegram</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Map Container with Gesture Trap Elimination -->
+        <div class="lg:col-span-7 flex flex-col gap-3">
+          <div class="bg-white rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-card min-h-[340px] sm:min-h-[420px] relative flex-1">
+            <!-- Iframe has pointer-events-none on mobile by default to prevent scroll-locking -->
+            <iframe 
+              id="yandex-map-iframe"
+              src="https://yandex.ru/map-widget/v1/?ll=43.059400%2C44.048700&z=16&pt=43.059400%2C44.048700,pm2rdm" 
+              width="100%" 
+              height="100%" 
+              frameborder="0" 
+              allowfullscreen="true" 
+              class="w-full h-full min-h-[340px] sm:min-h-[420px] border-0 pointer-events-none sm:pointer-events-auto transition-all"
+              title="Студия массажа Виктории на карте Пятигорска"
+              loading="lazy"
+            ></iframe>
+            
+            <!-- Map overlay button on mobile: click to unlock pan/zoom -->
+            <div id="map-unlock-overlay" class="sm:hidden absolute inset-0 bg-[#0F1A15]/15 backdrop-blur-[1px] flex items-center justify-center p-4 z-10 transition-opacity">
+              <button type="button" onclick="unlockMap()" class="min-h-[44px] bg-white text-[#1F2421] font-bold text-xs px-5 py-3 rounded-2xl shadow-xl border border-[#D9C4AC] flex items-center gap-2 active:scale-95 transition-transform">
+                <i data-lucide="hand" class="w-4 h-4 text-[#8A633A]"></i>
+                <span>Нажмите, чтобы включить карту</span>
+              </button>
+            </div>
+
+            <!-- Map top address pill -->
+            <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-[#D9C4AC] shadow-md text-xs font-bold text-[#1F2421] flex items-center gap-2 pointer-events-none">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              <span>Проспект Калинина, 19 • Парковка у входа</span>
+            </div>
+          </div>
+
+          <!-- 2 Full-width mobile navigation buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <a href="https://yandex.ru/maps/org/massazhny_salon/34951215519/" target="_blank" rel="noopener noreferrer" class="min-h-[48px] flex items-center justify-center gap-2 bg-[#1F332A] hover:bg-[#16251F] text-white font-bold text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-sm transition-all text-center">
+              <span class="text-red-500 font-black">Я</span>
+              <span>Открыть в приложении Яндекс Карты</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="https://yandex.ru/maps/?rtext=~44.0487,43.0594" target="_blank" rel="noopener noreferrer" class="min-h-[48px] flex items-center justify-center gap-2 bg-white hover:bg-cream-200 text-[#1F2421] border border-[#D9C4AC] font-bold text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-sm transition-all text-center">
+              <i data-lucide="navigation" class="w-4 h-4 text-[#8A633A]"></i>
+              <span>Построить маршрут (просп. Калинина, 19)</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       12. UPPER FOOTER & FULL LEGAL BLOCK
+       ========================================================================= -->
+  <footer class="bg-[#FAF7F2] border-t border-[#E5E0D8]">
+    
+    <!-- Upper Footer -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: Studio Identity -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-[#1F332A] text-[#D9C4AC] flex items-center justify-center font-serif text-lg font-bold border border-[#8A633A]/40 flex-shrink-0">
+              В
+            </div>
+            <div>
+              <div class="font-serif text-2xl font-bold text-[#1F332A] tracking-wide leading-none">
+                ВИКТОРИЯ
+              </div>
+              <div class="text-[11px] uppercase tracking-widest text-[#7A5229] font-bold mt-1">
+                Студия массажа & SPA • Пятигорск
+              </div>
+            </div>
+          </div>
+          
+          <p class="text-xs sm:text-sm text-[#374151] max-w-sm leading-relaxed mb-4">
+            Премиальный массаж, кедровая бочка, аппаратная коррекция фигуры и скульптурирование лица от топ-мастера Виктории. Восстанавливаем тело, снимаем боли и возвращаем лёгкость.
+          </p>
+          
+          <div class="text-xs text-[#7A5229] font-bold flex items-center gap-2">
+            <span>★ 5.0 на Яндекс Картах</span>
+            <span class="text-[#1F332A]">•</span>
+            <span class="text-[#1F2421]">г. Пятигорск, просп. Калинина, 19</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#1F332A] mb-3">
+            НАВИГАЦИЯ
+          </div>
+          <ul class="space-y-2 text-xs sm:text-sm font-medium text-[#374151]">
+            <li><a href="#services" class="hover:text-[#1F332A] transition-colors py-1 inline-block">Каталог услуг и цены</a></li>
+            <li><a href="#about" class="hover:text-[#1F332A] transition-colors py-1 inline-block">О мастере Виктории</a></li>
+            <li><a href="#quiz" class="hover:text-[#1F332A] transition-colors py-1 inline-block">Подобрать массаж (Квиз)</a></li>
+            <li><a href="#mountains" class="hover:text-[#1F332A] transition-colors py-1 inline-block">Восстановление после гор</a></li>
+            <li><a href="#certificates" class="hover:text-[#1F332A] transition-colors py-1 inline-block">Подарочные сертификаты</a></li>
+            <li><a href="#reviews" class="hover:text-[#1F332A] transition-colors py-1 inline-block">Отзывы гостей (★ 5.0)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contacts -->
+        <div>
+          <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#1F332A] mb-3">
+            КОНТАКТЫ
+          </div>
+          <div class="space-y-2.5 text-xs sm:text-sm text-[#374151]">
+            <div>
+              <a href="tel:+79620230888" class="text-[#111827] font-bold text-base hover:text-[#1F332A] transition-colors block">
+                +7 (962) 023-08-88
+              </a>
+              <span class="text-[11px] text-[#4B5563]">Ежедневно: 08:00 – 23:00</span>
+            </div>
+            <p class="font-medium text-[#1F2421]">г. Пятигорск, просп. Калинина, 19</p>
+            <div class="flex items-center gap-3 pt-1">
+              <a href="https://wa.me/79620230888" target="_blank" class="text-emerald-700 hover:text-emerald-800 font-bold hover:underline">WhatsApp</a>
+              <span class="text-[#D9C4AC]">•</span>
+              <a href="https://t.me/+79620230888" target="_blank" class="text-sky-700 hover:text-sky-800 font-bold hover:underline">Telegram</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Official Legal Block in Exact Structure -->
+    <div class="bg-[#0F1713] text-[#E5E7EB] py-8 border-t border-[#1C2C24]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center space-y-3.5 text-xs sm:text-[13px] leading-relaxed">
+          
+          <!-- Строка 1 (Реквизиты) -->
+          <div class="font-medium text-white flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+            <span>Индивидуальный предприниматель Агаджанова Ануш Сергеевна</span>
+            <span class="hidden sm:inline text-sage-600">|</span>
+            <span>ИНН 263212876540</span>
+            <span class="hidden sm:inline text-sage-600">|</span>
+            <span>г. Пятигорск</span>
+          </div>
+
+          <div class="w-full max-w-2xl h-[1px] bg-[#1C2C24]"></div>
+
+          <!-- Строка 2 (Контакты студии) -->
+          <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[#E5E7EB]">
+            <span>E-mail: <a href="mailto:info@victoria-spa.ru" class="text-white hover:text-[#D9C4AC] underline underline-offset-4 transition-colors font-semibold">info@victoria-spa.ru</a></span>
+            <span>Тел: <a href="tel:+79620230888" class="text-white hover:text-[#D9C4AC] underline underline-offset-4 transition-colors font-bold">+7 (962) 023-08-88</a></span>
+            <span>Telegram: <a href="https://t.me/+79620230888" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#D9C4AC] underline underline-offset-4 transition-colors font-semibold">@victoria_spa</a></span>
+          </div>
+
+          <div class="w-full max-w-2xl h-[1px] bg-[#1C2C24]"></div>
+
+          <!-- Строка 3 (Ссылки на документы капсом с подчеркиванием при наведении) -->
+          <div class="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-1.5 text-[11px] sm:text-xs tracking-wider uppercase font-semibold text-[#D1D5DB]">
+            <a href="#" onclick="showToast('Политика конфиденциальности (152-ФЗ)'); return false;" class="hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-all py-1">
+              ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ (152-ФЗ)
+            </a>
+            <span class="hidden md:inline text-sage-600">•</span>
+            <a href="#" onclick="showToast('Пользовательское соглашение и оферта'); return false;" class="hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-all py-1">
+              ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ И ОФЕРТА
+            </a>
+            <span class="hidden md:inline text-sage-600">•</span>
+            <a href="#" onclick="showToast('Политика использования Cookie'); return false;" class="hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-all py-1">
+              ПОЛИТИКА ИСПОЛЬЗОВАНИЯ COOKIE
+            </a>
+          </div>
+
+          <div class="w-full max-w-2xl h-[1px] bg-[#1C2C24]"></div>
+
+          <!-- Строка 4 (Копирайт и разработчик) -->
+          <div class="text-[#9CA3AF] text-xs">
+            © 2026 Студия массажа & SPA Виктории. Все права защищены. Разработка сайтов под ключ: <span class="text-white font-bold tracking-wide">VLADISLAND.STUDIO</span>
+          </div>
+
+          <!-- Строка 5 (Закон о данных) -->
+          <div class="text-[11px] text-[#6B7280] tracking-wider uppercase font-medium">
+            ХОСТИНГ И БАЗЫ ДАННЫХ — РОССИЙСКАЯ ФЕДЕРАЦИЯ (Ч. 5 СТ. 18 152-ФЗ)
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       13. STICKY MOBILE BOTTOM BAR (CRO DOCK FOR SMARTPHONES)
+       ========================================================================= -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 backdrop-blur-md bg-white/95 border-t border-[#E5E0D8] shadow-2xl pb-safe px-3.5 pt-2">
+    <div class="flex items-center gap-2.5 max-w-md mx-auto">
+      <!-- WhatsApp round button -->
+      <a href="https://wa.me/79620230888?text=Здравствуйте!%20Хочу%20записаться%20на%20массаж%20со%20скидкой%2010%" target="_blank" rel="noopener noreferrer" class="w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center shadow-md active:scale-95 transition-transform flex-shrink-0" aria-label="Написать в WhatsApp">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.541 1.849.82 2.796.82 3.183 0 5.769-2.587 5.769-5.767 0-3.181-2.586-5.766-5.769-5.766zm3.374 8.163c-.144.405-.837.774-1.17.823-.313.046-.704.072-2.072-.493-1.636-.677-2.67-2.339-2.752-2.449-.082-.109-.661-.881-.661-1.68 0-.798.421-1.192.571-1.353.15-.16.329-.2.439-.2.11 0 .22.001.315.006.102.004.237-.039.37.28.14.336.478 1.164.52 1.25.042.086.07.187.014.3-.056.113-.084.184-.167.282-.084.099-.176.221-.252.298-.084.084-.172.176-.074.344.098.168.437.721.938 1.167.644.574 1.187.752 1.355.836.168.084.267.07.366-.042.099-.113.421-.49.533-.659.112-.168.225-.141.378-.084.153.056.97.457 1.137.541.168.084.28.127.322.197.042.07.042.408-.102.813zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.436 5.176L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+      </a>
+
+      <!-- Wide gradient CTA button -->
+      <button onclick="openBookingModal('Мобильный док')" class="flex-1 min-h-[48px] bg-gradient-to-r from-[#1F332A] via-[#243C32] to-[#1F332A] active:scale-98 text-white font-bold text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-elevated flex items-center justify-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4 text-[#D9C4AC]"></i>
+        <span>Записаться со скидкой 10%</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Desktop Floating Action Button (Hidden on Mobile) -->
+  <aside aria-label="Быстрая связь" class="hidden sm:flex fixed bottom-6 right-6 z-40 flex-col items-end gap-3">
+    <div id="fab-menu" class="hidden flex-col items-end gap-2.5 mb-1 transition-all duration-300">
+      <a href="https://wa.me/79620230888?text=Здравствуйте!%20Хочу%20записаться%20на%20массаж%20в%20студию%20Виктории" target="_blank" rel="noopener noreferrer" class="min-h-[44px] flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-full shadow-lg text-xs font-semibold hover:scale-105 transition-all">
+        <span>Написать в WhatsApp</span>
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.541 1.849.82 2.796.82 3.183 0 5.769-2.587 5.769-5.767 0-3.181-2.586-5.766-5.769-5.766zm3.374 8.163c-.144.405-.837.774-1.17.823-.313.046-.704.072-2.072-.493-1.636-.677-2.67-2.339-2.752-2.449-.082-.109-.661-.881-.661-1.68 0-.798.421-1.192.571-1.353.15-.16.329-.2.439-.2.11 0 .22.001.315.006.102.004.237-.039.37.28.14.336.478 1.164.52 1.25.042.086.07.187.014.3-.056.113-.084.184-.167.282-.084.099-.176.221-.252.298-.084.084-.172.176-.074.344.098.168.437.721.938 1.167.644.574 1.187.752 1.355.836.168.084.267.07.366-.042.099-.113.421-.49.533-.659.112-.168.225-.141.378-.084.153.056.97.457 1.137.541.168.084.28.127.322.197.042.07.042.408-.102.813zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.436 5.176L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+      </a>
+
+      <a href="https://t.me/+79620230888" target="_blank" rel="noopener noreferrer" class="min-h-[44px] flex items-center gap-2.5 bg-sky-600 hover:bg-sky-700 text-white px-4 py-2.5 rounded-full shadow-lg text-xs font-semibold hover:scale-105 transition-all">
+        <span>Написать в Telegram</span>
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.15 3.35-1.35 3.73-1.35.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+      </a>
+
+      <a href="tel:+79620230888" class="min-h-[44px] flex items-center gap-2.5 bg-[#1F332A] hover:bg-[#16251F] text-white px-4 py-2.5 rounded-full shadow-lg text-xs font-semibold hover:scale-105 transition-all">
+        <span>Позвонить Виктории</span>
+        <i data-lucide="phone" class="w-4 h-4 text-[#D9C4AC]"></i>
+      </a>
+    </div>
+
+    <button onclick="toggleFabMenu()" class="min-w-[56px] min-h-[56px] relative group w-14 h-14 rounded-full bg-gradient-to-r from-[#1F332A] to-[#16251F] hover:from-[#16251F] hover:to-[#0F1A15] text-white flex items-center justify-center shadow-2xl border-2 border-[#8A633A] hover:scale-105 transition-all duration-300 focus:outline-none cursor-pointer" aria-label="Быстрая связь в мессенджерах">
+      <span class="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-white animate-pulse"></span>
+      <i data-lucide="message-circle" id="fab-icon-open" class="w-6 h-6 text-cream-100"></i>
+      <i data-lucide="x" id="fab-icon-close" class="w-6 h-6 text-cream-100 hidden"></i>
+    </button>
+  </aside>
+
+
+  <!-- Scroll to Top Floating Button -->
+  <button id="scroll-to-top-btn" onclick="scrollToTop()" class="fixed bottom-20 sm:bottom-6 left-4 sm:left-auto sm:right-24 z-40 w-11 h-11 rounded-full bg-white/95 text-[#1F332A] hover:bg-[#1F332A] hover:text-white border border-[#D9C4AC] shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-3 cursor-pointer" aria-label="Наверх">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+
+  <!-- =========================================================================
+       14. INTERACTIVE BOOKING MODAL
+       ========================================================================= -->
+  <dialog id="booking-modal" class="p-0 bg-transparent backdrop:bg-sage-950/70 backdrop:backdrop-blur-sm z-50 max-w-lg w-full mx-auto" aria-labelledby="modal-title">
+    <div class="bg-white rounded-3xl p-5 sm:p-8 shadow-2xl border border-[#E5E0D8] relative m-3 sm:m-4">
+      
+      <!-- Close button (44x44 touch zone) -->
+      <button onclick="closeBookingModal()" class="min-w-[44px] min-h-[44px] absolute top-3 right-3 p-2 rounded-xl text-[#4B5563] hover:text-[#1F2421] hover:bg-cream-200 transition-colors flex items-center justify-center" aria-label="Закрыть">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-left mb-5">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3 py-1 rounded-full border border-[#D9C4AC]">
+          Онлайн-запись
+        </span>
+        <h3 id="modal-title" class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421] mt-2">
+          Записаться на сеанс к Виктории
+        </h3>
+        <p class="text-xs text-[#374151] mt-1 font-medium">
+          Выберите услугу и желаемое время. Мы мгновенно свяжемся с вами в чате для подтверждения.
+        </p>
+      </div>
+
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-3.5">
+        
+        <div>
+          <label class="block text-xs font-bold text-[#1F2421] mb-1">Выбранная услуга:</label>
+          <select id="modal-service" class="min-h-[44px] w-full text-base sm:text-sm bg-cream-100 border border-[#E5E0D8] rounded-xl px-3.5 py-2.5 text-[#1F2421] font-medium focus:outline-none focus:border-[#1F332A]">
+            <option value="Общий оздоровительный массаж (60 мин)">Общий оздоровительный массаж (60 мин)</option>
+            <option value="Глубокий спортивный массаж (восстановление)">Глубокий спортивный массаж (восстановление)</option>
+            <option value="Массаж спины и ШВЗ (45 мин)">Массаж спины и ШВЗ (45 мин)</option>
+            <option value="Массаж ног и стоп">Массаж ног и стоп</option>
+            <option value="Лимфодренажный и висцеральный массаж">Лимфодренажный и висцеральный массаж</option>
+            <option value="SPA для двоих Гармония чувств">SPA для двоих «Гармония чувств»</option>
+            <option value="Кедровая бочка с фитосборами">Кедровая бочка с фитосборами</option>
+            <option value="Инфракрасная кабина">Инфракрасная кабина</option>
+            <option value="Мужской СПА-комплекс">Мужской СПА-комплекс</option>
+            <option value="Starvac аппаратный массаж">Starvac аппаратный вакуумный массаж</option>
+            <option value="Антицеллюлитный ручной массаж">Антицеллюлитный ручной массаж</option>
+            <option value="Буккальный и лифтинг-массаж лица">Буккальный и лифтинг-массаж лица</option>
+            <option value="Витапластика лица">Витапластика лица</option>
+            <option value="Подарочный сертификат">Подарочный сертификат</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-[#1F2421] mb-1">Ваше имя:</label>
+            <input type="text" id="modal-name" required placeholder="Например, Анна" class="min-h-[44px] w-full text-base sm:text-sm bg-cream-100 border border-[#E5E0D8] rounded-xl px-3.5 py-2.5 text-[#1F2421] font-medium focus:outline-none focus:border-[#1F332A]" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#1F2421] mb-1">Номер телефона:</label>
+            <input type="tel" id="modal-phone" required placeholder="+7 (___) ___-__-__" class="min-h-[44px] w-full text-base sm:text-sm bg-cream-100 border border-[#E5E0D8] rounded-xl px-3.5 py-2.5 text-[#1F2421] font-medium focus:outline-none focus:border-[#1F332A]" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-[#1F2421] mb-1">Удобный день:</label>
+            <input type="date" id="modal-date" class="min-h-[44px] w-full text-base sm:text-sm bg-cream-100 border border-[#E5E0D8] rounded-xl px-3.5 py-2 text-[#1F2421] font-medium focus:outline-none focus:border-[#1F332A]" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#1F2421] mb-1">Время (08:00–23:00):</label>
+            <input type="text" id="modal-time" placeholder="Например, 14:00 или вечер" class="min-h-[44px] w-full text-base sm:text-sm bg-cream-100 border border-[#E5E0D8] rounded-xl px-3.5 py-2.5 text-[#1F2421] font-medium focus:outline-none focus:border-[#1F332A]" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-[#1F2421] mb-1">Где вам удобнее подтвердить запись?</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="min-h-[44px] flex items-center gap-2 p-2.5 rounded-xl border border-[#E5E0D8] bg-cream-50 cursor-pointer hover:border-emerald-600">
+              <input type="radio" name="messenger" value="WhatsApp" checked class="text-emerald-600 focus:ring-emerald-500" />
+              <span class="text-xs font-bold text-[#1F2421]">WhatsApp</span>
+            </label>
+            <label class="min-h-[44px] flex items-center gap-2 p-2.5 rounded-xl border border-[#E5E0D8] bg-cream-50 cursor-pointer hover:border-sky-600">
+              <input type="radio" name="messenger" value="Telegram" class="text-sky-600 focus:ring-sky-500" />
+              <span class="text-xs font-bold text-[#1F2421]">Telegram</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="min-h-[48px] w-full bg-[#1F332A] hover:bg-[#16251F] text-white font-semibold text-sm py-3.5 rounded-xl shadow-md transition-all mt-2 cursor-pointer">
+          Отправить заявку Виктории
+        </button>
+
+        <p class="text-[11px] text-center text-[#4B5563] font-medium">
+          Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
+        </p>
+
+      </form>
+    </div>
+  </dialog>
+
+
+  <!-- Toast notification banner -->
+  <div id="toast" class="fixed top-5 right-5 z-50 hidden bg-[#13201A] text-cream-100 px-5 py-3 rounded-2xl shadow-2xl border border-[#8A633A]/60 text-xs sm:text-sm font-semibold items-center gap-2 transition-all">
+    <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toast-message">Действие выполнено</span>
+  </div>
+
+
+  <!-- =========================================================================
+       15. INTERACTIVE JAVASCRIPT LOGIC
+       ========================================================================= -->
+  <script>
+    // Initialize Lucide Icons & Date input
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      const today = new Date().toISOString().split('T')[0];
+      const dateInput = document.getElementById('modal-date');
+      if (dateInput) {
+        dateInput.value = today;
+        dateInput.min = today;
+      }
+
+      // Initialize Audience Carousel Dots scroll tracking
+      const carousel = document.getElementById('audience-carousel');
+      const dots = document.querySelectorAll('#audience-dots .dot');
+      if (carousel && dots.length > 0) {
+        carousel.addEventListener('scroll', () => {
+          const itemWidth = carousel.firstElementChild ? carousel.firstElementChild.getBoundingClientRect().width + 14 : 280;
+          const activeIndex = Math.min(dots.length - 1, Math.max(0, Math.round(carousel.scrollLeft / itemWidth)));
+          dots.forEach((dot, idx) => {
+            if (idx === activeIndex) {
+              dot.classList.add('w-6', 'bg-[#1F332A]');
+              dot.classList.remove('w-1.5', 'bg-[#D5CDC0]');
+            } else {
+              dot.classList.remove('w-6', 'bg-[#1F332A]');
+              dot.classList.add('w-1.5', 'bg-[#D5CDC0]');
+            }
+          });
+        }, { passive: true });
+      }
+    });
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+    }
+
+    // Floating Action Bar Toggle (Desktop)
+    function toggleFabMenu() {
+      const menu = document.getElementById('fab-menu');
+      const iconOpen = document.getElementById('fab-icon-open');
+      const iconClose = document.getElementById('fab-icon-close');
+      if (menu) {
+        const isHidden = menu.classList.contains('hidden');
+        if (isHidden) {
+          menu.classList.remove('hidden');
+          menu.classList.add('flex');
+          iconOpen.classList.add('hidden');
+          iconClose.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+          menu.classList.remove('flex');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+        }
+      }
+    }
+
+    // Scroll to Top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Unlock Yandex Map (Remove gesture trap)
+    function unlockMap() {
+      const iframe = document.getElementById('yandex-map-iframe');
+      const overlay = document.getElementById('map-unlock-overlay');
+      if (iframe) {
+        iframe.classList.remove('pointer-events-none');
+        iframe.classList.add('pointer-events-auto');
+      }
+      if (overlay) {
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        setTimeout(() => overlay.classList.add('hidden'), 300);
+      }
+      showToast('Карта активна для перемещения');
+    }
+
+    // Catalog Tabs Switcher with Horizontal Auto-Scroll
+    function switchTab(tabId, clickedBtn) {
+      const panes = document.querySelectorAll('.tab-pane');
+      panes.forEach(p => {
+        p.classList.add('hidden');
+        p.classList.remove('block');
+      });
+
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+
+      const targetPane = document.getElementById(tabId);
+      if (targetPane) {
+        targetPane.classList.remove('hidden');
+        targetPane.classList.add('block');
+      }
+
+      const targetBtn = clickedBtn || document.getElementById('btn-' + tabId);
+      if (targetBtn) {
+        targetBtn.classList.add('active');
+        targetBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+
+      lucide.createIcons();
+    }
+
+    // Expand/Collapse Remaining Services in Category
+    function toggleMoreServices(tabId, count) {
+      const moreContainer = document.getElementById(tabId + '-more');
+      const btn = document.getElementById('btn-more-' + tabId);
+      if (!moreContainer || !btn) return;
+
+      const btnText = btn.querySelector('.btn-text');
+      const icon = btn.querySelector('svg, i');
+      
+      if (moreContainer.classList.contains('hidden')) {
+        moreContainer.classList.remove('hidden');
+        if (btnText) btnText.textContent = 'Свернуть услуги категории';
+        if (icon) icon.classList.add('rotate-180');
+      } else {
+        moreContainer.classList.add('hidden');
+        if (btnText) btnText.textContent = `Показать ещё услуги категории (${count})`;
+        if (icon) icon.classList.remove('rotate-180');
+        document.getElementById(tabId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      lucide.createIcons();
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(button) {
+      const item = button.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const arrow = item.querySelector('.faq-arrow');
+      const isOpen = !answer.classList.contains('hidden');
+
+      document.querySelectorAll('.faq-item .faq-answer').forEach(ans => ans.classList.add('hidden'));
+      document.querySelectorAll('.faq-item .faq-arrow').forEach(arr => arr.classList.remove('rotate-180'));
+
+      if (!isOpen) {
+        answer.classList.remove('hidden');
+        arrow.classList.add('rotate-180');
+      }
+    }
+
+    // Quiz Logic
+    const quizAnswers = { step1: '', step2: '', step3: '' };
+
+    function selectQuizAnswer(step, answerText) {
+      quizAnswers['step' + step] = answerText;
+      if (step === 1) goQuizStep(2);
+      else if (step === 2) goQuizStep(3);
+      else if (step === 3) calculateQuizResult();
+    }
+
+    function goQuizStep(stepNumber) {
+      document.querySelectorAll('.quiz-step').forEach(s => s.classList.add('hidden'));
+      const targetStep = document.getElementById('quiz-step-' + stepNumber);
+      if (targetStep) targetStep.classList.remove('hidden');
+
+      for (let i = 1; i <= 3; i++) {
+        const dot = document.getElementById('quiz-step-dot-' + i);
+        if (dot) {
+          if (i <= stepNumber) {
+            dot.classList.add('bg-[#1F332A]');
+            dot.classList.remove('bg-[#E5E0D8]');
+          } else {
+            dot.classList.remove('bg-[#1F332A]');
+            dot.classList.add('bg-[#E5E0D8]');
+          }
+        }
+      }
+    }
+
+    function calculateQuizResult() {
+      document.querySelectorAll('.quiz-step').forEach(s => s.classList.add('hidden'));
+      const resultBlock = document.getElementById('quiz-result');
+      if (resultBlock) resultBlock.classList.remove('hidden');
+
+      const titleEl = document.getElementById('quiz-recommended-title');
+      const descEl = document.getElementById('quiz-recommended-desc');
+      const whatsappBtn = document.getElementById('quiz-whatsapp-btn');
+
+      let recTitle = 'Авторский оздоровительный массаж + Кедровая бочка';
+      let recDesc = 'Идеально для глубокого снятия мышечных зажимов, прогрева тела и восстановления сил.';
+
+      const ans1 = quizAnswers.step1;
+      if (ans1.includes('зажимы') || ans1.includes('боль')) {
+        recTitle = 'Лечебно-оздоровительный массаж спины и ШВЗ + Фитопрогрев';
+        recDesc = 'Прицельная работа с триггерными точками, трапециями и поясницей для устранения боли и зажимов.';
+      } else if (ans1.includes('гор') || ans1.includes('Бештау')) {
+        recTitle = 'Глубокий спортивный массаж ног и спины «Второе дыхание»';
+        recDesc = 'Снятие крепатуры икроножных мышц и бёдер, лимфодренаж и восстановление после восхождений на Бештау и Машук.';
+      } else if (ans1.includes('двоих')) {
+        recTitle = 'Романтический SPA-комплекс для двоих с кедровой бочкой';
+        recDesc = 'Распаривание с алтайскими травами, массаж при свечах, ароматерапия и горный чай в уединенной обстановке.';
+      } else if (ans1.includes('фигуру') || ans1.includes('Starvac')) {
+        recTitle = 'Аппаратный Starvac + Моделирующий антицеллюлитный уход';
+        recDesc = 'Устранение отёков, разрушение жировых капсул, подтяжка контуров тела и гладкость кожи.';
+      } else if (ans1.includes('релакс')) {
+        recTitle = 'Аромарелакс всего тела + Кедровая бочка из сибирского кедра';
+        recDesc = 'Полное отключение от суеты, нежные растирания с тёплыми маслами лаванды и чаепитие с горным мёдом.';
+      }
+
+      if (titleEl) titleEl.textContent = recTitle;
+      if (descEl) descEl.textContent = recDesc;
+
+      const msg = `Здравствуйте, Виктория! Прошёл(ла) тест на сайте. Мне рекомендована программа: "${recTitle}". Хочу записаться к вам со скидкой 10% и бонусом!`;
+      if (whatsappBtn) {
+        whatsappBtn.href = `https://wa.me/79620230888?text=${encodeURIComponent(msg)}`;
+      }
+    }
+
+    function restartQuiz() {
+      quizAnswers.step1 = '';
+      quizAnswers.step2 = '';
+      quizAnswers.step3 = '';
+      const resultBlock = document.getElementById('quiz-result');
+      if (resultBlock) resultBlock.classList.add('hidden');
+      goQuizStep(1);
+    }
+
+    // Gift Certificate Nominal Selector
+    function selectCertificateNominal(nominal) {
+      const orderLink = document.getElementById('cert-order-link');
+      if (orderLink) {
+        const text = `Здравствуйте, Виктория! Хочу оформить подарочный сертификат на: ${nominal}. Подскажите, как оплатить и получить?`;
+        orderLink.href = `https://wa.me/79620230888?text=${encodeURIComponent(text)}`;
+      }
+      showToast(`Выбран сертификат на ${nominal}`);
+    }
+
+    // Booking Modal controls
+    function openBookingModal(defaultService = '') {
+      const modal = document.getElementById('booking-modal');
+      const serviceSelect = document.getElementById('modal-service');
+      
+      if (serviceSelect && defaultService) {
+        for (let i = 0; i < serviceSelect.options.length; i++) {
+          if (serviceSelect.options[i].text.toLowerCase().includes(defaultService.toLowerCase())) {
+            serviceSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      if (modal) {
+        modal.showModal();
+      }
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.close();
+      }
+    }
+
+    // Booking Submit -> WhatsApp or Telegram
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      
+      const service = document.getElementById('modal-service').value;
+      const name = document.getElementById('modal-name').value;
+      const phone = document.getElementById('modal-phone').value;
+      const date = document.getElementById('modal-date').value;
+      const time = document.getElementById('modal-time').value || 'Удобное время';
+      
+      const messengerRadio = document.querySelector('input[name="messenger"]:checked');
+      const messenger = messengerRadio ? messengerRadio.value : 'WhatsApp';
+
+      const messageText = `Здравствуйте, Виктория!\nХочу записаться в вашу студию массажа:\n- Услуга: ${service}\n- Имя: ${name}\n- Телефон: ${phone}\n- Желаемая дата: ${date}\n- Время: ${time}`;
+
+      closeBookingModal();
+      showToast('Перенаправляем в чат для подтверждения...');
+
+      setTimeout(() => {
+        if (messenger === 'WhatsApp') {
+          window.open(`https://wa.me/79620230888?text=${encodeURIComponent(messageText)}`, '_blank');
+        } else {
+          window.open(`https://t.me/+79620230888`, '_blank');
+        }
+      }, 700);
+    }
+
+    // Copy to clipboard
+    function copyToClipboard(text, successMsg = 'Скопировано!') {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(successMsg);
+      }).catch(() => {
+        showToast('Адрес: ' + text);
+      });
+    }
+
+    // Toast message helper
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.textContent = message;
+        toast.classList.remove('hidden');
+        toast.classList.add('flex');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.classList.remove('flex');
+        }, 3000);
+      }
+    }
+
+    // Scroll listeners: Reading Progress Bar + Scroll to Top Button + Header elevation
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      
+      // 1. Reading progress bar
+      const progressBar = document.getElementById('reading-progress-bar');
+      if (progressBar) {
+        progressBar.style.width = scrolled + '%';
+      }
+
+      // 2. Scroll to top button (Visible after 400px)
+      const topBtn = document.getElementById('scroll-to-top-btn');
+      if (topBtn) {
+        if (winScroll > 400) {
+          topBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+          topBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        } else {
+          topBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+          topBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        }
+      }
+
+      // 3. Header elevation
+      const header = document.getElementById('main-header');
+      if (header) {
+        if (winScroll > 40) {
+          header.classList.add('shadow-md', 'py-0.5');
+        } else {
+          header.classList.remove('shadow-md', 'py-0.5');
+        }
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>

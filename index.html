@@ -2137,7 +2137,7 @@
               ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ И ОФЕРТА
             </a>
             <span class="hidden md:inline text-sage-600">•</span>
-            <a href="#" onclick="showToast('Политика использования Cookie'); return false;" class="hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-all py-1">
+            <a href="#" onclick="openLegalModal('cookie'); return false;" class="hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-all py-1">
               ПОЛИТИКА ИСПОЛЬЗОВАНИЯ COOKIE
             </a>
           </div>
@@ -2362,6 +2362,9 @@
 
         <p><strong>4. Отзыв согласия</strong><br>
         Субъект персональных данных имеет право в любой момент отозвать своё согласие, направив письменное заявление по электронной почте <a href="mailto:info@victoria-spa.ru" class="text-[#7A5229] font-bold underline">info@victoria-spa.ru</a> или обратившись по адресу: г. Пятигорск, просп. Калинина, 19.</p>
+
+        <p id="legal-cookie-section"><strong>5. Использование файлов Cookie</strong><br>
+        Сайт использует технические и аналитические файлы cookie для обеспечения стабильной и безопасной работы веб-ресурса, персонализации сервисов и анализа посещаемости без передачи сведений третьим лицам. Обработка cookie осуществляется в строгом соответствии с 152-ФЗ РФ. Вы можете управлять файлами cookie или отключить их в настройках своего браузера.</p>
       </div>
 
       <div class="pt-4 border-t border-[#E5E0D8] mt-4 flex justify-end">
@@ -2372,6 +2375,46 @@
 
     </div>
   </dialog>
+
+  <!-- =========================================================================
+       14. FLOATING COOKIE CONSENT BANNER (152-ФЗ РФ)
+       ========================================================================= -->
+  <div 
+    id="cookie-banner" 
+    class="fixed bottom-20 sm:bottom-6 left-4 right-4 sm:right-auto sm:max-w-md z-50 p-4 sm:p-5 rounded-2xl bg-[#13201A]/95 backdrop-blur-md border border-[#8A633A]/50 shadow-2xl text-white transition-all duration-300 opacity-0 translate-y-6 pointer-events-none"
+    role="dialog"
+    aria-label="Уведомление об использовании файлов Cookie"
+  >
+    <div class="flex items-start gap-3.5">
+      <div class="w-10 h-10 rounded-xl bg-[#1F332A] border border-[#8A633A]/40 flex items-center justify-center flex-shrink-0 text-[#D9C4AC] shadow-inner">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+        </svg>
+      </div>
+      <div class="flex-1">
+        <div class="font-bold text-sm text-white mb-1 tracking-wide">Использование файлов Cookie</div>
+        <p class="text-xs text-[#E5E7EB] leading-relaxed">
+          Мы используем технические файлы cookie для корректной работы сайта без передачи третьим лицам (152-ФЗ РФ).
+        </p>
+      </div>
+    </div>
+    <div class="mt-3.5 pt-3 border-t border-white/10 flex items-center gap-2">
+      <button 
+        type="button" 
+        onclick="acceptCookieConsent()" 
+        class="flex-1 min-h-[42px] bg-[#D9C4AC] hover:bg-[#EAD6BD] text-[#1F332A] font-bold text-xs py-2.5 px-4 rounded-xl shadow-md transition-all active:scale-95 cursor-pointer text-center"
+      >
+        Принять и продолжить
+      </button>
+      <button 
+        type="button" 
+        onclick="openLegalModal('cookie')" 
+        class="min-h-[42px] text-xs text-[#D9C4AC] hover:text-white px-3 py-2.5 font-semibold transition-colors underline cursor-pointer"
+      >
+        Подробнее
+      </button>
+    </div>
+  </div>
 
   <!-- Toast notification banner -->
   <div id="toast" class="fixed top-5 right-5 z-50 hidden bg-[#13201A] text-cream-100 px-5 py-3 rounded-2xl shadow-2xl border border-[#8A633A]/60 text-xs sm:text-sm font-semibold items-center gap-2 transition-all">
@@ -2389,6 +2432,7 @@
       lucide.createIcons();
       initStudioMap();
       initReviewsCarouselEvents();
+      initCookieBanner();
       const today = new Date().toISOString().split('T')[0];
       const dateInput = document.getElementById('modal-date');
       if (dateInput) {
@@ -2423,6 +2467,47 @@
       if (modal) {
         modal.showModal();
         lucide.createIcons();
+        if (type === 'cookie') {
+          setTimeout(() => {
+            const cookieSection = document.getElementById('legal-cookie-section');
+            if (cookieSection) {
+              cookieSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }, 100);
+        }
+      }
+    }
+
+    // Cookie Consent Banner (152-FZ)
+    function initCookieBanner() {
+      const banner = document.getElementById('cookie-banner');
+      if (!banner) return;
+      try {
+        const isAccepted = localStorage.getItem('cookie_consent_accepted');
+        if (isAccepted !== 'true') {
+          setTimeout(() => {
+            banner.classList.remove('opacity-0', 'translate-y-6', 'pointer-events-none');
+            banner.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+          }, 1000);
+        }
+      } catch (e) {
+        setTimeout(() => {
+          banner.classList.remove('opacity-0', 'translate-y-6', 'pointer-events-none');
+          banner.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        }, 1000);
+      }
+    }
+
+    function acceptCookieConsent() {
+      const banner = document.getElementById('cookie-banner');
+      try {
+        localStorage.setItem('cookie_consent_accepted', 'true');
+      } catch (e) {
+        console.warn('LocalStorage error:', e);
+      }
+      if (banner) {
+        banner.classList.add('opacity-0', 'translate-y-6', 'pointer-events-none');
+        banner.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
       }
     }
 

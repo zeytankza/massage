@@ -50,3 +50,7 @@
 python -m http.server 8000
 ```
 Сайт доступен по адресу `http://localhost:8000/massage.html`.
+
+
+### 🌐 Ссылка на опубликованный сайт (GitHub Pages):
+[https://zeytankza.github.io/massage/](https://zeytankza.github.io/massage/)

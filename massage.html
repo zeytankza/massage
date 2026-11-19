@@ -226,8 +226,8 @@
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 44.0487,
-      "longitude": 43.0594
+      "latitude": 44.050506,
+      "longitude": 43.065505
     },
     "openingHoursSpecification": [
       {
@@ -1969,24 +1969,21 @@
           </div>
         </div>
 
-        <!-- Interactive Map Container with Gesture Trap Elimination -->
+        <!-- Interactive Map Container (Clean Interactive Yandex Map, No Ads / Zero Banners) -->
         <div class="lg:col-span-7 flex flex-col gap-3">
-          <div class="bg-white rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-card min-h-[340px] sm:min-h-[420px] relative flex-1">
-            <!-- Iframe has pointer-events-none on mobile by default to prevent scroll-locking -->
-            <iframe 
-              id="yandex-map-iframe"
-              src="https://yandex.ru/map-widget/v1/?ll=43.059400%2C44.048700&z=16&pt=43.059400%2C44.048700,pm2rdm" 
-              width="100%" 
-              height="100%" 
-              frameborder="0" 
-              allowfullscreen="true" 
-              class="w-full h-full min-h-[340px] sm:min-h-[420px] border-0 pointer-events-none sm:pointer-events-auto transition-all"
-              title="Студия массажа Виктории на карте Пятигорска"
-              loading="lazy"
-            ></iframe>
+          <div class="bg-[#FAF7F2] rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-card min-h-[350px] sm:min-h-[440px] relative flex-1">
+            
+            <!-- Map Container (Clean JS API 2.1, No Ozon ads, exact Kalinina 19 coords) -->
+            <div id="studio-map" class="w-full h-full min-h-[350px] sm:min-h-[440px] pointer-events-none sm:pointer-events-auto relative">
+              <!-- Loading Skeleton Indicator -->
+              <div id="map-loader" class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#FAF7F2] text-[#4B5563] z-10 transition-opacity duration-300">
+                <div class="w-8 h-8 rounded-full border-2 border-[#1F332A] border-t-transparent animate-spin"></div>
+                <span class="text-xs font-semibold tracking-wider text-[#1F2421]">Загрузка карты (просп. Калинина, 19)...</span>
+              </div>
+            </div>
             
             <!-- Map overlay button on mobile: click to unlock pan/zoom -->
-            <div id="map-unlock-overlay" class="sm:hidden absolute inset-0 bg-[#0F1A15]/15 backdrop-blur-[1px] flex items-center justify-center p-4 z-10 transition-opacity">
+            <div id="map-unlock-overlay" class="sm:hidden absolute inset-0 bg-[#0F1A15]/15 backdrop-blur-[1px] flex items-center justify-center p-4 z-20 transition-opacity">
               <button type="button" onclick="unlockMap()" class="min-h-[44px] bg-white text-[#1F2421] font-bold text-xs px-5 py-3 rounded-2xl shadow-xl border border-[#D9C4AC] flex items-center gap-2 active:scale-95 transition-transform">
                 <i data-lucide="hand" class="w-4 h-4 text-[#8A633A]"></i>
                 <span>Нажмите, чтобы включить карту</span>
@@ -1994,20 +1991,20 @@
             </div>
 
             <!-- Map top address pill -->
-            <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-[#D9C4AC] shadow-md text-xs font-bold text-[#1F2421] flex items-center gap-2 pointer-events-none">
+            <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-[#D9C4AC] shadow-md text-xs font-bold text-[#1F2421] flex items-center gap-2 pointer-events-none z-20">
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
               <span>Проспект Калинина, 19 • Парковка у входа</span>
             </div>
           </div>
 
-          <!-- 2 Full-width mobile navigation buttons -->
+          <!-- 2 Full-width navigation buttons -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <a href="https://yandex.ru/maps/org/massazhny_salon/34951215519/" target="_blank" rel="noopener noreferrer" class="min-h-[48px] flex items-center justify-center gap-2 bg-[#1F332A] hover:bg-[#16251F] text-white font-bold text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-sm transition-all text-center">
               <span class="text-red-500 font-black">Я</span>
               <span>Открыть в приложении Яндекс Карты</span>
               <i data-lucide="external-link" class="w-4 h-4"></i>
             </a>
-            <a href="https://yandex.ru/maps/?rtext=~44.0487,43.0594" target="_blank" rel="noopener noreferrer" class="min-h-[48px] flex items-center justify-center gap-2 bg-white hover:bg-cream-200 text-[#1F2421] border border-[#D9C4AC] font-bold text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-sm transition-all text-center">
+            <a href="https://yandex.ru/maps/?rtext=~44.050506,43.065505" target="_blank" rel="noopener noreferrer" class="min-h-[48px] flex items-center justify-center gap-2 bg-white hover:bg-cream-200 text-[#1F2421] border border-[#D9C4AC] font-bold text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-sm transition-all text-center">
               <i data-lucide="navigation" class="w-4 h-4 text-[#8A633A]"></i>
               <span>Построить маршрут (просп. Калинина, 19)</span>
             </a>
@@ -2320,6 +2317,7 @@
     // Initialize Lucide Icons & Date input
     document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
+      initStudioMap();
       const today = new Date().toISOString().split('T')[0];
       const dateInput = document.getElementById('modal-date');
       if (dateInput) {
@@ -2381,13 +2379,77 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Unlock Yandex Map (Remove gesture trap)
+    // Clean Interactive Yandex Map (No Ads, Zero Banners, Exact Kalinina 19 coords)
+    function initStudioMap() {
+      const mapContainer = document.getElementById('studio-map');
+      if (!mapContainer) return;
+
+      let mapLoaded = false;
+      const loadMapScript = () => {
+        if (mapLoaded) return;
+        mapLoaded = true;
+
+        const script = document.createElement('script');
+        script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+        script.async = true;
+        script.onload = () => {
+          if (typeof ymaps !== 'undefined') {
+            ymaps.ready(() => {
+              const mapLoader = document.getElementById('map-loader');
+              if (mapLoader) {
+                mapLoader.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => mapLoader.remove(), 300);
+              }
+
+              // Координаты салона: г. Пятигорск, проспект Калинина, 19 (строго Калинина, не Московская!)
+              const coords = [44.050506, 43.065505];
+              const map = new ymaps.Map('studio-map', {
+                center: coords,
+                zoom: 17,
+                controls: ['zoomControl', 'fullscreenControl']
+              }, {
+                suppressMapOpenBlock: true
+              });
+
+              const placemark = new ymaps.Placemark(coords, {
+                balloonContentHeader: '<div style="font-weight:800; font-size:15px; color:#1F332A;">Массажный салон на Калинина, 19</div>',
+                balloonContentBody: '<div style="font-size:13px; color:#374151; line-height:1.5;"><strong>Массажный кабинет</strong><br>Ежедневно: 08:00 – 23:00<br>г. Пятигорск, просп. Калинина, 19 (1 этаж)<br><span style="color:#7A5229; font-weight:600;">Ориентир — крыльцо рядом с «Соляной пещерой»</span><br>Парковка прямо перед входом</div>',
+                hintContent: 'Массажный салон на Калинина, 19'
+              }, {
+                preset: 'islands#darkGreenDotIconWithCaption',
+                iconColor: '#1F332A'
+              });
+
+              map.geoObjects.add(placemark);
+              map.behaviors.disable('scrollZoom');
+            });
+          }
+        };
+        document.head.appendChild(script);
+      };
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              loadMapScript();
+              observer.disconnect();
+            }
+          });
+        }, { rootMargin: '300px' });
+        observer.observe(mapContainer);
+      } else {
+        loadMapScript();
+      }
+    }
+
+    // Unlock Yandex Map on Mobile (Remove gesture trap)
     function unlockMap() {
-      const iframe = document.getElementById('yandex-map-iframe');
+      const mapContainer = document.getElementById('studio-map');
       const overlay = document.getElementById('map-unlock-overlay');
-      if (iframe) {
-        iframe.classList.remove('pointer-events-none');
-        iframe.classList.add('pointer-events-auto');
+      if (mapContainer) {
+        mapContainer.classList.remove('pointer-events-none');
+        mapContainer.classList.add('pointer-events-auto');
       }
       if (overlay) {
         overlay.classList.add('opacity-0', 'pointer-events-none');
@@ -2420,6 +2482,7 @@
       }
 
       lucide.createIcons();
+      initStudioMap();
     }
 
     // Expand/Collapse Remaining Services in Category
@@ -2442,6 +2505,7 @@
         document.getElementById(tabId).scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
       lucide.createIcons();
+      initStudioMap();
     }
 
     // FAQ Accordion Toggle

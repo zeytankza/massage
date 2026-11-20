@@ -55,3 +55,4 @@ python -m http.server 8000
 
 ### 🌐 Ссылка на опубликованный сайт (GitHub Pages):
 [https://zeytankza.github.io/massage/](https://zeytankza.github.io/massage/)
+<!-- pre-commit hook test -->

@@ -1,3 +1,7 @@
 scratch/
 *.py
 header_old.txt
+
+_backups/
+*.env
+*secret*

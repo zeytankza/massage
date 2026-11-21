@@ -344,6 +344,67 @@
       }
     }
 
+  
+    /* Smooth Quiz Step & Result Transitions */
+    .quiz-step-fade-out {
+      animation: quizFadeOut 0.14s ease-out forwards;
+    }
+    .quiz-step-fade-in {
+      animation: quizFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .quiz-result-fade-in {
+      animation: quizResultIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes quizFadeOut {
+      from { opacity: 1; transform: translateY(0); }
+      to { opacity: 0; transform: translateY(-6px); }
+    }
+    @keyframes quizFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes quizResultIn {
+      from { opacity: 0; transform: scale(0.98) translateY(12px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .quiz-opt-btn {
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Smooth Expandable Cards (Показать ещё услуги) */
+    @keyframes softExpandCards {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-soft-expand {
+      animation: softExpandCards 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes softCollapseCards {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    }
+    .animate-soft-collapse {
+      animation: softCollapseCards 0.22s ease-in forwards;
+    }
+
+    /* Silky smooth reading progress bar */
+    #reading-progress-bar {
+      transition: width 0.12s ease-out;
+      will-change: width;
+    }
+
   </style>
 
   <!-- Schema.org Microdata (JSON-LD) for Local SEO & Rich Snippets -->
@@ -506,7 +567,7 @@
 
   <!-- Reading Progress Bar (Terracotta/Bronze 2.5px) -->
   <div class="w-full h-[2.5px] bg-[#E5E0D8]/60 overflow-hidden">
-    <div id="reading-progress-bar" class="h-full bg-gradient-to-r from-[#C29968] to-[#8A633A] w-0 transition-all duration-150"></div>
+    <div id="reading-progress-bar" class="h-full bg-gradient-to-r from-[#C29968] to-[#8A633A] w-0"></div>
   </div>
 
   <!-- Mobile Drawer Navigation -->
@@ -875,7 +936,7 @@
               Шаг 1 из 3: Какая ваша главная цель визита?
             </h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <button type="button" onclick="selectQuizAnswer(1, 'Снять боль и зажимы в спине / шее')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(1, 'Снять боль и зажимы в спине / шее', this)" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">1</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Снять боль и зажимы</div>
@@ -883,7 +944,7 @@
                 </div>
               </button>
 
-              <button type="button" onclick="selectQuizAnswer(1, 'Тотальный релакс и снятие стресса')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(1, 'Тотальный релакс и снятие стресса', this)" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">2</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Тотально расслабиться</div>
@@ -891,7 +952,7 @@
                 </div>
               </button>
 
-              <button type="button" onclick="selectQuizAnswer(1, 'Восстановление после гор (Бештау / Машук) или спорта')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(1, 'Восстановление после гор (Бештау / Машук, this) или спорта')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">3</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">После гор и хайкинга</div>
@@ -899,7 +960,7 @@
                 </div>
               </button>
 
-              <button type="button" onclick="selectQuizAnswer(1, 'Моделирование фигуры / Лицо / Starvac')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(1, 'Моделирование фигуры / Лицо / Starvac', this)" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">4</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Коррекция фигуры или лицо</div>
@@ -907,7 +968,7 @@
                 </div>
               </button>
 
-              <button type="button" onclick="selectQuizAnswer(1, 'Романтический SPA для двоих с бочкой')" class="min-h-[48px] sm:col-span-2 quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(1, 'Романтический SPA для двоих с бочкой', this)" class="min-h-[48px] sm:col-span-2 quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-[#F7EFE6] text-[#7A5229] flex items-center justify-center flex-shrink-0 font-bold text-sm">5</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">СПА для двоих</div>
@@ -923,7 +984,7 @@
               Шаг 2 из 3: Какую интенсивность проработки вы предпочитаете?
             </h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <button type="button" onclick="selectQuizAnswer(2, 'Мягкая релакс-техника')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(2, 'Мягкая релакс-техника', this)" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">А</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Мягкая релакс-техника</div>
@@ -931,7 +992,7 @@
                 </div>
               </button>
 
-              <button type="button" onclick="selectQuizAnswer(2, 'Средняя оздоровительная')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(2, 'Средняя оздоровительная', this)" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">Б</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Средняя оздоровительная</div>
@@ -939,7 +1000,7 @@
                 </div>
               </button>
 
-              <button type="button" onclick="selectQuizAnswer(2, 'Глубокая силовая / Спортивная')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(2, 'Глубокая силовая / Спортивная', this)" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">В</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Глубокая силовая / спортивная</div>
@@ -947,7 +1008,7 @@
                 </div>
               </button>
 
-              <button type="button" onclick="selectQuizAnswer(2, 'Аппаратная методика (Starvac / кавитация)')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(2, 'Аппаратная методика (Starvac / кавитация, this)')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">Г</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Аппаратные методики</div>
@@ -968,7 +1029,7 @@
               Шаг 3 из 3: Есть ли дополнительные пожелания к процедуре?
             </h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <button type="button" onclick="selectQuizAnswer(3, 'Обязательно распаривание в кедровой бочке')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(3, 'Обязательно распаривание в кедровой бочке', this)" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-[#F7EFE6] text-[#7A5229] flex items-center justify-center flex-shrink-0 font-bold text-sm">🌲</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Хочу кедровую бочку</div>
@@ -976,7 +1037,7 @@
                 </div>
               </button>
 
-              <button type="button" onclick="selectQuizAnswer(3, 'Хочу совместить с массажем лица')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(3, 'Хочу совместить с массажем лица', this)" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center flex-shrink-0 font-bold text-sm">✨</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Добавить массаж лица</div>
@@ -984,7 +1045,7 @@
                 </div>
               </button>
 
-              <button type="button" onclick="selectQuizAnswer(3, 'Главное — быстрое снятие боли и душ')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(3, 'Главное — быстрое снятие боли и душ', this)" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-sage-100 text-[#1F332A] flex items-center justify-center flex-shrink-0 font-bold text-sm">🚿</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Быстро снять зажим + душ</div>
@@ -992,7 +1053,7 @@
                 </div>
               </button>
 
-              <button type="button" onclick="selectQuizAnswer(3, 'Доверяю выбор Виктории на месте')" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
+              <button type="button" onclick="selectQuizAnswer(3, 'Доверяю выбор Виктории на месте', this)" class="min-h-[48px] quiz-opt-btn p-3.5 sm:p-4 rounded-2xl border-2 border-[#E5E0D8] hover:border-[#1F332A] bg-cream-100 hover:bg-sage-50 text-left transition-all flex items-start gap-3">
                 <span class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0 font-bold text-sm">🤍</span>
                 <div>
                   <div class="font-bold text-[#1F2421] text-sm">Доверяю мастеру</div>
@@ -2813,7 +2874,7 @@
       initReviewsCarouselEvents();
     }
 
-    // Expand/Collapse Remaining Services in Category
+    // Expand/Collapse Remaining Services in Category (Smooth Animated Expand/Collapse)
     function toggleMoreServices(tabId, count) {
       const moreContainer = document.getElementById(tabId + '-more');
       const btn = document.getElementById('btn-more-' + tabId);
@@ -2824,15 +2885,23 @@
       
       if (moreContainer.classList.contains('hidden')) {
         moreContainer.classList.remove('hidden');
+        moreContainer.classList.remove('animate-soft-collapse');
+        moreContainer.classList.add('animate-soft-expand');
         if (btnText) btnText.textContent = 'Свернуть услуги категории';
         if (icon) icon.classList.add('rotate-180');
+        lucide.createIcons();
       } else {
-        moreContainer.classList.add('hidden');
-        if (btnText) btnText.textContent = `Показать ещё услуги категории (${count})`;
-        if (icon) icon.classList.remove('rotate-180');
-        document.getElementById(tabId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        moreContainer.classList.remove('animate-soft-expand');
+        moreContainer.classList.add('animate-soft-collapse');
+        setTimeout(() => {
+          moreContainer.classList.add('hidden');
+          moreContainer.classList.remove('animate-soft-collapse');
+          if (btnText) btnText.textContent = `Показать ещё услуги категории (${count})`;
+          if (icon) icon.classList.remove('rotate-180');
+          lucide.createIcons();
+          btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 210);
       }
-      lucide.createIcons();
       initStudioMap();
       initReviewsCarouselEvents();
     }
@@ -2877,24 +2946,61 @@
       }
     }
 
-    // Quiz Logic
+    // Quiz Logic (Smooth Multi-step with Visual Feedback)
     const quizAnswers = { step1: '', step2: '', step3: '' };
 
-    function selectQuizAnswer(step, answerText) {
+    function selectQuizAnswer(step, answerText, btn) {
       quizAnswers['step' + step] = answerText;
-      if (step === 1) goQuizStep(2);
-      else if (step === 2) goQuizStep(3);
-      else if (step === 3) calculateQuizResult();
+
+      // 1. Деликатная тактильная подсветка нажатого варианта
+      if (btn) {
+        const parentGrid = btn.closest('.grid');
+        if (parentGrid) {
+          parentGrid.querySelectorAll('.quiz-opt-btn').forEach(b => {
+            if (b === btn) {
+              b.classList.add('border-[#1F332A]', 'bg-[#EBF3EF]', 'ring-2', 'ring-[#1F332A]/20', 'scale-[1.01]');
+            } else {
+              b.classList.add('opacity-50');
+            }
+          });
+        }
+      }
+
+      // 2. Мягкая микро-пауза (160мс), чтобы глаз зафиксировал выбор, затем плавный переход
+      setTimeout(() => {
+        const currentStepEl = document.getElementById('quiz-step-' + step);
+        if (currentStepEl) {
+          currentStepEl.classList.add('quiz-step-fade-out');
+        }
+
+        setTimeout(() => {
+          if (step === 1) goQuizStep(2);
+          else if (step === 2) goQuizStep(3);
+          else if (step === 3) calculateQuizResult();
+        }, 130);
+      }, 160);
     }
 
     function goQuizStep(stepNumber) {
-      document.querySelectorAll('.quiz-step').forEach(s => s.classList.add('hidden'));
+      document.querySelectorAll('.quiz-step').forEach(s => {
+        s.classList.add('hidden');
+        s.classList.remove('quiz-step-fade-out', 'quiz-step-fade-in');
+      });
       const targetStep = document.getElementById('quiz-step-' + stepNumber);
-      if (targetStep) targetStep.classList.remove('hidden');
+      if (targetStep) {
+        targetStep.classList.remove('hidden');
+        targetStep.classList.add('quiz-step-fade-in');
+        // Сброс подсветки кнопок в новом шаге
+        targetStep.querySelectorAll('.quiz-opt-btn').forEach(b => {
+          b.classList.remove('border-[#1F332A]', 'bg-[#EBF3EF]', 'ring-2', 'ring-[#1F332A]/20', 'scale-[1.01]', 'opacity-50');
+        });
+      }
 
+      // Плавная анимация точек прогресса
       for (let i = 1; i <= 3; i++) {
         const dot = document.getElementById('quiz-step-dot-' + i);
         if (dot) {
+          dot.style.transition = 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
           if (i <= stepNumber) {
             dot.classList.add('bg-[#1F332A]');
             dot.classList.remove('bg-[#E5E0D8]');
@@ -2907,9 +3013,15 @@
     }
 
     function calculateQuizResult() {
-      document.querySelectorAll('.quiz-step').forEach(s => s.classList.add('hidden'));
+      document.querySelectorAll('.quiz-step').forEach(s => {
+        s.classList.add('hidden');
+        s.classList.remove('quiz-step-fade-out');
+      });
       const resultBlock = document.getElementById('quiz-result');
-      if (resultBlock) resultBlock.classList.remove('hidden');
+      if (resultBlock) {
+        resultBlock.classList.remove('hidden');
+        resultBlock.classList.add('quiz-result-fade-in');
+      }
 
       const titleEl = document.getElementById('quiz-recommended-title');
       const descEl = document.getElementById('quiz-recommended-desc');
@@ -3094,10 +3206,12 @@
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
       
-      // 1. Reading progress bar
+      // 1. Reading progress bar (Smooth RAF update)
       const progressBar = document.getElementById('reading-progress-bar');
       if (progressBar) {
-        progressBar.style.width = scrolled + '%';
+        window.requestAnimationFrame(() => {
+          progressBar.style.width = scrolled + '%';
+        });
       }
 
       // 2. Scroll to top button (Visible after 400px)

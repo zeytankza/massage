@@ -201,6 +201,149 @@
       0% { background-position: -200% 0; }
       100% { background-position: 200% 0; }
     }
+  
+    /* =========================================================================
+       SUBTLE LUXURY ANIMATIONS (ORGANIC & NOT ABRUPT)
+       ========================================================================= */
+    /* Ambient slow glow for hero background blobs */
+    @keyframes ambientGlowSlow {
+      0%, 100% {
+        transform: translate(-50%, 0) scale(1);
+        opacity: 0.45;
+      }
+      50% {
+        transform: translate(-50%, 10px) scale(1.04);
+        opacity: 0.65;
+      }
+    }
+    .animate-ambient-glow {
+      animation: ambientGlowSlow 14s ease-in-out infinite;
+      will-change: transform, opacity;
+    }
+
+    /* Soft scroll reveal */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-item.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Soft staggered delays for card grids */
+    .stagger-1 { transition-delay: 0.07s; }
+    .stagger-2 { transition-delay: 0.14s; }
+    .stagger-3 { transition-delay: 0.21s; }
+    .stagger-4 { transition-delay: 0.28s; }
+
+    /* Soft micro-hover interactions for cards */
+    .hover-soft {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+      will-change: transform;
+    }
+    .hover-soft:hover {
+      transform: translateY(-3.5px);
+    }
+
+    /* Soft buttons transition */
+    .btn-soft {
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease;
+      will-change: transform;
+    }
+    .btn-soft:hover {
+      transform: translateY(-1.5px);
+    }
+    .btn-soft:active {
+      transform: translateY(0.5px) scale(0.99);
+    }
+
+    /* Smooth Tab pane entrance */
+    .tab-pane.block {
+      animation: softTabFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes softTabFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Soft Quiz step entrance */
+    .quiz-step:not(.hidden) {
+      animation: softQuizIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes softQuizIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Smooth Dialog transitions */
+    dialog[open] {
+      animation: softModalOpen 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    dialog::backdrop {
+      animation: softBackdropOpen 0.28s ease-out forwards;
+    }
+    @keyframes softModalOpen {
+      from {
+        opacity: 0;
+        transform: scale(0.97) translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+    @keyframes softBackdropOpen {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Smooth FAQ Accordion using Grid transitions */
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      opacity: 0;
+    }
+    .faq-answer > div {
+      overflow: hidden;
+    }
+    .faq-answer.is-open {
+      grid-template-rows: 1fr;
+      opacity: 1;
+    }
+
+    /* Accessibility: Respect Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal-item {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .animate-ambient-glow {
+        animation: none !important;
+      }
+    }
+
   </style>
 
   <!-- Schema.org Microdata (JSON-LD) for Local SEO & Rich Snippets -->
@@ -429,14 +572,14 @@
        ========================================================================= -->
   <section class="relative overflow-hidden pt-4 pb-8 sm:pt-8 sm:pb-16 lg:pt-14 lg:pb-24">
     <!-- Ambient glow decorative circles -->
-    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-[#EEDDC6]/40 via-sage-100/30 to-cream-300/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-[#EEDDC6]/40 via-sage-100/30 to-cream-300/50 rounded-full blur-3xl pointer-events-none -z-10 animate-ambient-glow"></div>
     <div class="absolute -top-24 right-0 w-96 h-96 bg-sage-200/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
         
         <!-- Left Content Column -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
+        <div class="lg:col-span-7 flex flex-col items-start text-left reveal-item">
           
           <!-- Key Trust Trigger Badge -->
           <div class="inline-flex items-center gap-2 bg-white border border-[#D9C4AC] rounded-full px-3.5 py-1.5 shadow-sm mb-3 sm:mb-4">
@@ -912,7 +1055,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 reveal-item">
         <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3.5 py-1 rounded-full border border-[#D9C4AC]">
           Прайс и программы
         </span>
@@ -1804,7 +1947,7 @@
   <section id="faq" class="py-14 lg:py-24 bg-cream-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       
-      <div class="text-center max-w-xl mx-auto mb-8 sm:mb-12">
+      <div class="text-center max-w-xl mx-auto mb-8 sm:mb-12 reveal-item">
         <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3.5 py-1 rounded-full border border-[#D9C4AC]">
           Частые вопросы
         </span>
@@ -1819,57 +1962,67 @@
       <div class="space-y-3">
         
         <!-- FAQ 1 -->
-        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm">
+        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm reveal-item">
           <button onclick="toggleFaq(this)" class="min-h-[48px] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-bold text-[#1F2421] text-sm sm:text-base focus:outline-none">
             <span>Нужна ли предварительная запись?</span>
-            <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0"></i>
+            <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0 rotate-180"></i>
           </button>
-          <div class="faq-answer px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed border-t border-[#E5E0D8] pt-3">
-            Да, мы принимаем гостей по предварительной записи. Это позволяет выделить для каждого гостя персональное время без спешки, очередей и пересечений, подготовить кабинет и прогреть кедровую бочку.
+          <div class="faq-answer px-4 sm:px-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed is-open">
+            <div class="pt-3 pb-4 sm:pb-5 border-t border-[#E5E0D8]">
+              Да, мы принимаем гостей по предварительной записи. Это позволяет выделить для каждого гостя персональное время без спешки, очередей и пересечений, подготовить кабинет и прогреть кедровую бочку.
+            </div>
           </div>
         </div>
 
         <!-- FAQ 2 -->
-        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm">
+        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm reveal-item">
           <button onclick="toggleFaq(this)" class="min-h-[48px] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-bold text-[#1F2421] text-sm sm:text-base focus:outline-none">
             <span>Есть ли у вас душ?</span>
             <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0"></i>
           </button>
-          <div class="faq-answer px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed border-t border-[#E5E0D8] pt-3">
-            Да! В студии оборудована чистая индивидуальная душевая комната со всеми принадлежностями (гель, шампунь, кондиционер, свежие хлопковые полотенца, фен). Принять душ можно до и после сеанса.
+          <div class="faq-answer px-4 sm:px-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed">
+            <div class="pt-3 pb-4 sm:pb-5 border-t border-[#E5E0D8]">
+              Да! В студии оборудована чистая индивидуальная душевая комната со всеми принадлежностями (гель, шампунь, кондиционер, свежие хлопковые полотенца, фен). Принять душ можно до и после сеанса.
+            </div>
           </div>
         </div>
 
         <!-- FAQ 3 -->
-        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm">
+        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm reveal-item">
           <button onclick="toggleFaq(this)" class="min-h-[48px] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-bold text-[#1F2421] text-sm sm:text-base focus:outline-none">
             <span>Что взять с собой на сеанс?</span>
             <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0"></i>
           </button>
-          <div class="faq-answer px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed border-t border-[#E5E0D8] pt-3">
-            Ничего с собой брать не нужно! Мы предоставляем всё: одноразовое бельё, мягкие тапочки, простыни, махровые полотенца и резинки для волос.
+          <div class="faq-answer px-4 sm:px-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed">
+            <div class="pt-3 pb-4 sm:pb-5 border-t border-[#E5E0D8]">
+              Ничего с собой брать не нужно! Мы предоставляем всё: одноразовое бельё, мягкие тапочки, простыни, махровые полотенца и резинки для волос.
+            </div>
           </div>
         </div>
 
         <!-- FAQ 4 -->
-        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm">
+        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm reveal-item">
           <button onclick="toggleFaq(this)" class="min-h-[48px] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-bold text-[#1F2421] text-sm sm:text-base focus:outline-none">
             <span>Как добраться и где припарковаться?</span>
             <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0"></i>
           </button>
-          <div class="faq-answer px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed border-t border-[#E5E0D8] pt-3">
-            Студия находится по адресу: г. Пятигорск, проспект Калинина, 19. У нас удобный заезд, отдельный вход с улицы и просторная бесплатная парковка прямо перед дверью студии.
+          <div class="faq-answer px-4 sm:px-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed">
+            <div class="pt-3 pb-4 sm:pb-5 border-t border-[#E5E0D8]">
+              Студия находится по адресу: г. Пятигорск, проспект Калинина, 19. У нас удобный заезд, отдельный вход с улицы и просторная бесплатная парковка прямо перед дверью студии.
+            </div>
           </div>
         </div>
 
         <!-- FAQ 5 -->
-        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm">
+        <div class="faq-item bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden shadow-sm reveal-item">
           <button onclick="toggleFaq(this)" class="min-h-[48px] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-bold text-[#1F2421] text-sm sm:text-base focus:outline-none">
             <span>Какие есть противопоказания к процедурам?</span>
             <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-[#8A633A] transition-transform duration-300 flex-shrink-0"></i>
           </button>
-          <div class="faq-answer px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed border-t border-[#E5E0D8] pt-3">
-            Стандартные временные противопоказания: острые воспалительные процессы, температура, тромбофлебит, ранний срок беременности (для силовых техник). Перед сеансом Виктория проводит опрос и подбирает технику строго под ваше самочувствие.
+          <div class="faq-answer px-4 sm:px-5 text-xs sm:text-sm text-[#2D3748] leading-relaxed">
+            <div class="pt-3 pb-4 sm:pb-5 border-t border-[#E5E0D8]">
+              Стандартные временные противопоказания: острые воспалительные процессы, температура, тромбофлебит, ранний срок беременности (для силовых техник). Перед сеансом Виктория проводит опрос и подбирает технику строго под ваше самочувствие.
+            </div>
           </div>
         </div>
 
@@ -1885,7 +2038,7 @@
   <section id="contacts" class="py-14 lg:py-24 bg-cream-200/90 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12 reveal-item">
         <span class="text-xs font-bold uppercase tracking-wider text-[#7A5229] bg-[#F7EFE6] px-3.5 py-1 rounded-full border border-[#D9C4AC]">
           Ждём вас в гости
         </span>
@@ -2433,6 +2586,7 @@
       initStudioMap();
       initReviewsCarouselEvents();
       initCookieBanner();
+      initScrollReveal();
       const today = new Date().toISOString().split('T')[0];
       const dateInput = document.getElementById('modal-date');
       if (dateInput) {
@@ -2683,19 +2837,43 @@
       initReviewsCarouselEvents();
     }
 
-    // FAQ Accordion Toggle
+    // FAQ Accordion Toggle (Soft Grid Transition)
     function toggleFaq(button) {
       const item = button.closest('.faq-item');
       const answer = item.querySelector('.faq-answer');
       const arrow = item.querySelector('.faq-arrow');
-      const isOpen = !answer.classList.contains('hidden');
+      const isOpen = answer.classList.contains('is-open');
 
-      document.querySelectorAll('.faq-item .faq-answer').forEach(ans => ans.classList.add('hidden'));
+      document.querySelectorAll('.faq-item .faq-answer').forEach(ans => ans.classList.remove('is-open'));
       document.querySelectorAll('.faq-item .faq-arrow').forEach(arr => arr.classList.remove('rotate-180'));
 
       if (!isOpen) {
-        answer.classList.remove('hidden');
+        answer.classList.add('is-open');
         arrow.classList.add('rotate-180');
+      }
+    }
+
+    // Soft Scroll Reveal (Organic Luxury)
+    function initScrollReveal() {
+      const items = document.querySelectorAll('.reveal-item');
+      if (!items.length) return;
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, {
+          rootMargin: '0px 0px -30px 0px',
+          threshold: 0.05
+        });
+
+        items.forEach(el => observer.observe(el));
+      } else {
+        items.forEach(el => el.classList.add('is-revealed'));
       }
     }
 
